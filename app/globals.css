@@ -127,6 +127,10 @@
     @apply font-inter bg-background text-foreground;
   }
 
+  a {
+    @apply cursor-pointer;
+  }
+
   h1,
   h2,
   h3,
