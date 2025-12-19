@@ -4,10 +4,14 @@ import { useState } from "react";
 
 import Link from "next/link";
 
+import { getMenuLinks } from "@/data/menu-links";
+
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 
 export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuLinks = getMenuLinks();
 
   return (
     <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
@@ -30,16 +34,11 @@ export default function Menu() {
       </button>
       <SheetContent
         side="right"
-        className="w-full md:w-1/2 bg-black text-white border-none p-10"
+        className="w-full md:w-1/3 xl:w-1/4 bg-black text-white border-none p-10"
       >
         <SheetTitle className="sr-only">menu</SheetTitle>
         <nav className="flex h-full flex-col justify-center gap-10">
-          {[
-            { href: "/", label: "Home" },
-            { href: "/blog", label: "Blog" },
-            { href: "/about", label: "About" },
-            { href: "/contact", label: "Contact" },
-          ].map((item) => (
+          {menuLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}
