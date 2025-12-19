@@ -40,7 +40,7 @@ export default function Menu() {
         <SheetTitle className="sr-only">running image</SheetTitle>
         <div className="relative h-full w-full">
           <Image
-            src="/header-image.jpg"
+            src="/header-image.webp"
             fill
             alt="running women"
             className="object-cover"
