@@ -45,11 +45,25 @@ export default function Menu() {
             alt="running women"
             className="object-cover"
           />
+          <div className="absolute left-4 top-7 z-50  ">
+            <div className="flex gap-2">
+              <span className="text-white font-familjen font-bold text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
+                Running
+              </span>
+              <span className="text-black font-familjen font-bold text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
+                Stories
+              </span>
+            </div>
+            <p className="text-white font-medium text-lg  mt-2 ">
+              Your guide to the world of running.
+            </p>
+          </div>
+
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 25%)",
+                "linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 35%)",
             }}
           />
         </div>
@@ -59,7 +73,7 @@ export default function Menu() {
         className="w-full md:w-1/3 xl:w-1/4 bg-black text-white border-none p-10 [&>button]:hidden"
       >
         <SheetTitle className="sr-only">menu</SheetTitle>
-        <div className="absolute right-4 top-7">
+        <div className="absolute right-4 top-11">
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
             className="relative h-2.5 w-8 flex flex-col justify-between cursor-pointer"
