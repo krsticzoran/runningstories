@@ -34,9 +34,21 @@ export default function Menu() {
       </button>
       <SheetContent
         side="right"
-        className="w-full md:w-1/3 xl:w-1/4 bg-black text-white border-none p-10"
+        className="w-full md:w-1/3 xl:w-1/4 bg-black text-white border-none p-10 [&>button]:hidden"
       >
         <SheetTitle className="sr-only">menu</SheetTitle>
+        <div className="absolute right-10 top-10">
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="relative h-2.5 w-8 flex flex-col justify-between cursor-pointer"
+            aria-label="Toggle menu"
+          >
+            <div className="relative h-4 w-8">
+              <div className="absolute top-1/2 left-0 h-0.5 w-8 -translate-y-1/2 rotate-45 bg-white" />
+              <div className="absolute top-1/2 left-0 h-0.5 w-8 -translate-y-1/2 -rotate-45 bg-white" />
+            </div>
+          </button>
+        </div>
         <nav className="flex h-full flex-col justify-center gap-10">
           {menuLinks.map((item) => (
             <Link
