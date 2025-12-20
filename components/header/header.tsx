@@ -12,10 +12,10 @@ export default function Header() {
           <div className="flex w-full items-center justify-between h-full">
             <Link href="/" className="flex gap-2 items-center -mt-[5px]">
               <span className="text-white font-familjen text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
-                Running
+                Trkačke
               </span>
               <span className="text-black font-familjen text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
-                Stories
+                Priče
               </span>
             </Link>
             <Menu />

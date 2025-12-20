@@ -1,6 +1,6 @@
-# Running Stories
+# Trkačke Priče
 
-**Running Stories** is a website dedicated to running. The site will include:
+**Trkačke Priče** is a website dedicated to running. The site will include:
 
 - A blog with stories and tips about running
 - A section for recommended running gear

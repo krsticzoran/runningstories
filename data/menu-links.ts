@@ -5,9 +5,12 @@ type MenuLink = {
 
 export function getMenuLinks(): MenuLink[] {
   return [
-    { href: "/", label: "Home" },
-    { href: "/blog", label: "Blog" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Početna" },
+    { href: "/trening", label: "Trening" },
+    { href: "/planovi", label: "Planovi" },
+    { href: "/35-plus", label: "35+" },
+    { href: "/oprema", label: "Oprema" },
+    { href: "/vesti", label: "Vesti" },
+    { href: "/simonin-kutak", label: "Simonin kutak" },
   ];
 }

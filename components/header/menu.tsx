@@ -48,14 +48,14 @@ export default function Menu() {
           <div className="absolute left-4 top-7 z-50  ">
             <div className="flex gap-2">
               <span className="text-white font-familjen font-bold text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
-                Running
+                Trkačke
               </span>
               <span className="text-black font-familjen font-bold text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
-                Stories
+                Priče
               </span>
             </div>
             <p className="text-white font-medium text-lg  mt-2 ">
-              Your guide to the world of running.
+              Priče, saveti i inspiracija za trkače.
             </p>
           </div>
 
