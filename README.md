@@ -12,6 +12,6 @@
 - **Tailwind CSS** for styling
 - **Framer Motion** for animations
 - **ShadCN** UI components
+- **Velite** for MDX content management
 - **Supabase** for backend and database
 - **Vercel** for hosting
-- **Cloudflare** for image optimization
