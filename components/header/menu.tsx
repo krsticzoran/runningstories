@@ -91,9 +91,17 @@ export default function Menu() {
               key={item.href}
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
-              className="font-familjen text-[22px] leading-[22px] font-medium opacity-75"
+              className="group relative overflow-hidden font-familjen text-[22px] leading-[22px] font-medium h-[22px] block"
             >
-              {item.label}
+              {/* default text */}
+              <span className="block translate-y-0 opacity-75 transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                {item.label}
+              </span>
+
+              {/* hover text */}
+              <span className="absolute left-0 top-full block translate-y-0 text-white transition-all duration-500 ease-in-out group-hover:-translate-y-full">
+                {item.label}
+              </span>
             </Link>
           ))}
         </nav>
