@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Test članak - Proveravamo Velite",
+    "slug": "test-clanak",
+    "description": "Ovo je test članak da vidimo da li sve radi.",
+    "date": "2025-01-15T00:00:00.000Z",
+    "author": "Simona",
+    "category": "training",
+    "featured": true,
+    "metadata": {
+      "readingTime": 1,
+      "wordCount": 19
+    },
+    "excerpt": "Test članak\nOvo je moj prvi test članak!\nLista\n\nStavka 1\nStavka 2\nStavka 3\n\nKod\nconsole.log(\"Hello world!\");\n\nVelite radi! 🎉",
+    "content": "const{Fragment:n,jsx:e,jsxs:r}=arguments[0];function _createMdxContent(t){const l={code:\"code\",h1:\"h1\",h2:\"h2\",li:\"li\",p:\"p\",pre:\"pre\",strong:\"strong\",ul:\"ul\",...t.components};return r(n,{children:[e(l.h1,{children:\"Test članak\"}),\"\\n\",r(l.p,{children:[\"Ovo je moj \",e(l.strong,{children:\"prvi test članak\"}),\"!\"]}),\"\\n\",e(l.h2,{children:\"Lista\"}),\"\\n\",r(l.ul,{children:[\"\\n\",e(l.li,{children:\"Stavka 1\"}),\"\\n\",e(l.li,{children:\"Stavka 2\"}),\"\\n\",e(l.li,{children:\"Stavka 3\"}),\"\\n\"]}),\"\\n\",e(l.h2,{children:\"Kod\"}),\"\\n\",e(l.pre,{children:e(l.code,{className:\"language-javascript\",children:'console.log(\"Hello world!\");\\n'})}),\"\\n\",e(l.p,{children:\"Velite radi! 🎉\"})]})}return{default:function(n={}){const{wrapper:r}=n.components||{};return r?e(r,{...n,children:e(_createMdxContent,{...n})}):_createMdxContent(n)}};",
+    "categoryLabel": "Trening",
+    "categoryPath": "trening",
+    "permalink": "/trening/test-clanak"
+  }
+]
