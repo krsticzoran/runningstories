@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SiInstagram, SiYoutube, SiTiktok } from "react-icons/si";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -105,6 +106,11 @@ export default function Menu() {
             </Link>
           ))}
         </nav>
+        <div className="flex gap-4">
+          <SiInstagram className="w-5 h-5 text-white opacity-75 cursor-pointer hover:opacity-100 transition" />
+          <SiYoutube className="w-5 h-5 text-white opacity-75 cursor-pointer hover:opacity-100 transition" />
+          <SiTiktok className="w-5 h-5 text-white opacity-75 cursor-pointer hover:opacity-100 transition" />
+        </div>
       </SheetContent>
     </Sheet>
   );
