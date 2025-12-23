@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PostPageProps) {
-  const { category, slug } = await params; // await ovde!
+  const { category, slug } = await params;
 
   const post = posts.find(
     (p) => p.categoryPath === category && p.slug === slug
@@ -32,20 +32,20 @@ export async function generateMetadata({ params }: PostPageProps) {
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const { category, slug } = await params; // await ovde!
+  const { category, slug } = await params;
 
   const post = posts.find(
     (p) => p.categoryPath === category && p.slug === slug
   );
 
-  console.log("Looking for:", { category, slug }); // Debug
+  console.log("Looking for:", { category, slug });
   console.log(
     "Available posts:",
     posts.map((p) => ({
       categoryPath: p.categoryPath,
       slug: p.slug,
     }))
-  ); // Debug
+  );
 
   if (!post) {
     notFound();
