@@ -49,26 +49,33 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="max-w-3xl mx-auto px-4 py-20">
+    <article className="flex flex-col gap-[60px">
       <header className="mb-8">
-        <Image src={post.image} alt={post.imageAlt} className="w-full h-auto" />
+        <Image
+          src={post.image}
+          alt={post.imageAlt}
+          className="w-full h-[500px] object-cover"
+        />
+        <div className="py-[120px] px-[60px] mx-auto">
+          <div className="max-w-[1300px]">
+            <div className="text-sm text-blue-600 font-semibold mb-2 uppercase">
+              {post.category}
+            </div>
 
-        <div className="text-sm text-blue-600 font-semibold mb-2 uppercase">
-          {post.category}
-        </div>
+            <h1 className="text-4xl mb-4 !font-instrument">{post.title}</h1>
 
-        <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+            {post.description && (
+              <p className="text-xl text-gray-600 mb-4">{post.description}</p>
+            )}
 
-        {post.description && (
-          <p className="text-xl text-gray-600 mb-4">{post.description}</p>
-        )}
-
-        <div className="flex items-center gap-4 text-sm text-gray-600">
-          <span className="font-semibold">{post.author}</span>
-          <span>•</span>
-          <time>{new Date(post.date).toLocaleDateString("sr-RS")}</time>
-          <span>•</span>
-          <span>{post.metadata.readingTime} min</span>
+            <div className="flex items-center gap-4 text-sm text-gray-600">
+              <span className="font-semibold">{post.author}</span>
+              <span>•</span>
+              <time>{new Date(post.date).toLocaleDateString("sr-RS")}</time>
+              <span>•</span>
+              <span>{post.metadata.readingTime} min</span>
+            </div>
+          </div>
         </div>
       </header>
 

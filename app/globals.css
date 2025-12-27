@@ -6,6 +6,7 @@
 @theme {
   --font-inter: "Inter", sans-serif;
   --font-familjen: "Familjen Grotesk", sans-serif;
+  --font-instrument: "Instrument Serif", serif;
 }
 
 @theme inline {
