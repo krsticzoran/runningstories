@@ -1,6 +1,7 @@
 import { posts } from "#site/content";
 import { notFound } from "next/navigation";
 import { MDXContent } from "@/components/mdx-content";
+import Image from "next/image";
 
 interface PostPageProps {
   params: Promise<{
@@ -11,7 +12,7 @@ interface PostPageProps {
 
 export async function generateStaticParams() {
   return posts.map((post) => ({
-    category: post.categoryPath,
+    category: post.category,
     slug: post.slug,
   }));
 }
@@ -19,9 +20,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PostPageProps) {
   const { category, slug } = await params;
 
-  const post = posts.find(
-    (p) => p.categoryPath === category && p.slug === slug
-  );
+  const post = posts.find((p) => p.category === category && p.slug === slug);
 
   if (!post) return {};
 
@@ -34,15 +33,13 @@ export async function generateMetadata({ params }: PostPageProps) {
 export default async function PostPage({ params }: PostPageProps) {
   const { category, slug } = await params;
 
-  const post = posts.find(
-    (p) => p.categoryPath === category && p.slug === slug
-  );
+  const post = posts.find((p) => p.category === category && p.slug === slug);
 
   console.log("Looking for:", { category, slug });
   console.log(
     "Available posts:",
     posts.map((p) => ({
-      categoryPath: p.categoryPath,
+      categoryPath: p.category,
       slug: p.slug,
     }))
   );
@@ -52,10 +49,12 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="max-w-3xl mx-auto px-4 py-12">
+    <article className="max-w-3xl mx-auto px-4 py-20">
       <header className="mb-8">
+        <Image src={post.image} alt={post.imageAlt} className="w-full h-auto" />
+
         <div className="text-sm text-blue-600 font-semibold mb-2 uppercase">
-          {post.categoryLabel}
+          {post.category}
         </div>
 
         <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
