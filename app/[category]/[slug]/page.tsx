@@ -49,38 +49,42 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="flex flex-col gap-[60px">
-      <header className="mb-8">
+    <article className="flex flex-col gap-[60px] mx-auto justify-center">
+      <header>
         <Image
           src={post.image}
           alt={post.imageAlt}
           className="w-full h-[500px] object-cover"
         />
-        <div className="py-[120px] px-[60px] mx-auto">
+        <div className="pt-[120px] px-[60px] flex justify-center">
           <div className="max-w-[1300px]">
-            <div className="text-sm text-blue-600 font-semibold mb-2 uppercase">
+            <p className="text-sm !text-custom-accent font-semibold mb-2 uppercase">
               {post.category}
-            </div>
-
-            <h1 className="text-4xl mb-4 !font-instrument">{post.title}</h1>
-
-            {post.description && (
-              <p className="text-xl text-gray-600 mb-4">{post.description}</p>
-            )}
-
-            <div className="flex items-center gap-4 text-sm text-gray-600">
-              <span className="font-semibold">{post.author}</span>
-              <span>•</span>
-              <time>{new Date(post.date).toLocaleDateString("sr-RS")}</time>
-              <span>•</span>
-              <span>{post.metadata.readingTime} min</span>
+            </p>
+            <div className="flex justify-between items-end">
+              <h1 className="text-[100px] leading-[100px] tracking-tight  !font-instrument max-w-[1000px]">
+                {post.title}
+              </h1>
+              <p className="flex gap-2 leading-[22px] font-medium">
+                Vreme čitanja:
+                <span className="font-semibold">
+                  {post.metadata.readingTime} min
+                </span>
+              </p>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <MDXContent code={post.content} />
+      <div className="flex justify-center w-full ">
+        <div className="max-w-[1300px] px-[60px] w-full">
+          <div className="h-0.5 w-full bg-[#ddd]" />
+        </div>
+      </div>
+      <div className="prose prose-lg flex justify-center pb-[120px] ">
+        <div className="max-w-[1300px] px-[60px] ">
+          <MDXContent code={post.content} />
+        </div>
       </div>
 
       {post.tags && post.tags.length > 0 && (

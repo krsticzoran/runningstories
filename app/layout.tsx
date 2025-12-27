@@ -19,7 +19,7 @@ const familjenGrotesk = Familjen_Grotesk({
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument",
   subsets: ["latin"],
-  weight: ["400"], // Instrument Serif ima samo 400 i 400 italic
+  weight: ["400"],
   style: ["normal", "italic"],
   display: "swap",
 });
