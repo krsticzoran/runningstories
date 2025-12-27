@@ -10,6 +10,7 @@
 
   --color-custom-accent: #f8286a;
   --color-bg-secondary: #f5f5f5;
+  --color-custom-dark: rgb(34, 34, 34);
 }
 
 @theme inline {
@@ -128,7 +129,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply font-inter text-foreground;
+    @apply font-inter;
   }
 
   a {

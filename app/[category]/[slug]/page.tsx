@@ -62,10 +62,10 @@ export default async function PostPage({ params }: PostPageProps) {
               {post.category}
             </p>
             <div className="flex justify-between items-end">
-              <h1 className="text-[100px] leading-[100px] tracking-tight  !font-instrument max-w-[1000px]">
+              <h1 className="text-[100px] text-black leading-[100px] tracking-tight  !font-instrument max-w-[1000px]">
                 {post.title}
               </h1>
-              <p className="flex gap-2 leading-[22px] font-medium">
+              <p className="flex gap-2 leading-[22px] font-medium text-custom-dark">
                 Vreme čitanja:
                 <span className="font-semibold">
                   {post.metadata.readingTime} min
