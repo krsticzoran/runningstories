@@ -49,7 +49,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="flex flex-col gap-[60px] mx-auto justify-center">
+    <article className="flex flex-col gap-[60px] mx-auto justify-center bg-bg-secondary">
       <header>
         <Image
           src={post.image}

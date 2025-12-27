@@ -9,6 +9,7 @@
   --font-instrument: "Instrument Serif", serif;
 
   --color-custom-accent: #f8286a;
+  --color-bg-secondary: #f5f5f5;
 }
 
 @theme inline {
@@ -127,7 +128,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply font-inter bg-background text-foreground;
+    @apply font-inter text-foreground;
   }
 
   a {
