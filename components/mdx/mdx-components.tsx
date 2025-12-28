@@ -1,4 +1,5 @@
 import { MDXComponents } from "mdx/types";
+import { Table } from "./Table";
 
 export const mdxComponents: MDXComponents = {
   h1: ({ children }) => (
@@ -56,4 +57,25 @@ export const mdxComponents: MDXComponents = {
   hr: () => <hr className="h-0.5 w-full bg-[#ddd] my-10" />,
   code: ({ children }) => <code className="">{children}</code>,
   pre: ({ children }) => <pre className="">{children}</pre>,
+
+  table: ({ children }) => (
+    <div className="hidden lg:block overflow-x-auto mb-8">
+      <table className="w-full border border-[#ddd] text-left sm:text-lg font-medium text-black leading-[22px] sm:leading-[25px]">
+        {children}
+      </table>
+    </div>
+  ),
+
+  thead: ({ children }) => <thead className="bg-gray-200">{children}</thead>,
+
+  tbody: ({ children }) => <tbody>{children}</tbody>,
+
+  tr: ({ children }) => <tr className="">{children}</tr>,
+
+  th: ({ children }) => (
+    <th className="px-4 py-4 font-semibold text-gray-700">{children}</th>
+  ),
+
+  td: ({ children }) => <td className="px-4 py-2">{children}</td>,
+  Table: (props) => <Table {...props} />,
 };
