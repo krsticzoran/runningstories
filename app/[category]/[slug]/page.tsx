@@ -85,7 +85,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
       <Divider />
 
-      <div className="flex flex-col justify-center  ">
+      <div className="flex flex-col justify-center items-center ">
         <div className="max-w-[1300px] px-5 sm:px-8 lg:px-[60px] xl:px-0 ">
           <MDXContent code={post.content} components={mdxComponents} />
         </div>
