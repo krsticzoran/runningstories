@@ -1,5 +1,6 @@
 import { MDXComponents } from "mdx/types";
 import { Table } from "./Table";
+import Image from "next/image";
 
 export const mdxComponents: MDXComponents = {
   h1: ({ children }) => (
@@ -77,5 +78,17 @@ export const mdxComponents: MDXComponents = {
   ),
 
   td: ({ children }) => <td className="px-4 py-2">{children}</td>,
+  img: ({ src, alt }) => (
+    <div className="relative w-full my-8 aspect-3/2">
+      <Image
+        src={src as string}
+        alt={alt || ""}
+        fill
+        className="object-cover"
+        sizes="(min-width: 1024px) 100vw, 100vw"
+      />
+    </div>
+  ),
+
   Table: (props) => <Table {...props} />,
 };
