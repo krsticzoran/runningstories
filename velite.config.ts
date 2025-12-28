@@ -19,8 +19,6 @@ export default defineConfig({
           slug: s.slug("posts"),
           description: s.string().max(999),
           date: s.isodate(),
-          updated: s.isodate().optional(),
-          author: s.enum(["Zoran", "Simona"]),
           category: s.enum([
             "trening",
             "oprema",
@@ -32,7 +30,6 @@ export default defineConfig({
           imageAlt: s.string().max(200),
           tags: s.array(s.string()).optional(),
           metadata: s.metadata(),
-          excerpt: s.excerpt(),
           content: s.mdx(),
         })
         .transform((data) => ({

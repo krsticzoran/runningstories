@@ -1,7 +1,9 @@
 import { posts } from "#site/content";
 import { notFound } from "next/navigation";
-import { MDXContent } from "@/components/mdx-content";
+import { MDXContent } from "@/components/mdx/mdx-content";
+import { mdxComponents } from "@/components/mdx/mdx-components";
 import Image from "next/image";
+import Divider from "@/components/ui/divider";
 
 interface PostPageProps {
   params: Promise<{
@@ -26,7 +28,7 @@ export async function generateMetadata({ params }: PostPageProps) {
 
   return {
     title: post.title,
-    description: post.description || post.excerpt,
+    description: post.description,
   };
 }
 
@@ -49,44 +51,46 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="flex flex-col gap-[60px] mx-auto justify-center bg-bg-secondary">
+    <article className="flex flex-col mx-auto justify-center bg-bg-secondary">
       <header>
         <Image
           src={post.image}
           alt={post.imageAlt}
-          className="w-full h-[500px] object-cover"
+          className="w-full h-[400px] xl:h-[500px] object-cover"
         />
-        <div className="pt-[120px] px-[60px] flex justify-center">
+        <div className="pt-[100px] xl:pt-[120px] px-5 sm:px-8 lg:px-[60px] xl:px-0 flex justify-center">
           <div className="max-w-[1300px]">
             <p className="text-sm !text-custom-accent font-semibold mb-2 uppercase">
               {post.category}
             </p>
-            <div className="flex justify-between items-end">
-              <h1 className="text-[100px] text-black leading-[100px] tracking-tight  !font-instrument max-w-[1000px]">
+            <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
+              <h1 className="text-black text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] lg:text-[100px]  lg:leading-[100px] tracking-tight  !font-instrument max-w-[1000px]">
                 {post.title}
               </h1>
-              <p className="flex gap-2 leading-[22px] font-medium text-custom-dark">
-                Vreme čitanja:
-                <span className="font-semibold">
-                  {post.metadata.readingTime} min
-                </span>
-              </p>
+              <div className="flex gap-4">
+                <p className="flex gap-2 leading-[22px] font-medium text-custom-dark">
+                  Vreme čitanja:
+                  <span className="font-semibold">
+                    {post.metadata.readingTime} min
+                  </span>
+                </p>
+              </div>
             </div>
+            <p className="sm:text-lg font-medium text-black leading-[22px] sm:leading-[25px] mt-5">
+              {post.description}
+            </p>
           </div>
         </div>
       </header>
 
-      <div className="flex justify-center w-full ">
-        <div className="max-w-[1300px] px-[60px] w-full">
-          <div className="h-0.5 w-full bg-[#ddd]" />
-        </div>
-      </div>
-      <div className="prose prose-lg flex justify-center pb-[120px] ">
-        <div className="max-w-[1300px] px-[60px] ">
-          <MDXContent code={post.content} />
-        </div>
-      </div>
+      <Divider />
 
+      <div className="flex flex-col justify-center  ">
+        <div className="max-w-[1300px] px-5 sm:px-8 lg:px-[60px] xl:px-0 ">
+          <MDXContent code={post.content} components={mdxComponents} />
+        </div>
+      </div>
+      <Divider className="mb-[100px] lg:mb-[120px]" />
       {post.tags && post.tags.length > 0 && (
         <div className="mt-8 flex flex-wrap gap-2">
           {post.tags.map((tag) => (

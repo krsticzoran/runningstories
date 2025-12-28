@@ -1,11 +1,10 @@
-"use client";
-
 import * as runtime from "react/jsx-runtime";
 import { useMemo } from "react";
+import type { MDXComponents } from "mdx/types";
 
 interface MDXContentProps {
   code: string;
-  components?: Record<string, React.ComponentType<unknown>>;
+  components?: MDXComponents;
 }
 
 export function MDXContent({ code, components }: MDXContentProps) {
@@ -14,5 +13,5 @@ export function MDXContent({ code, components }: MDXContentProps) {
     return fn({ ...runtime }).default;
   }, [code]);
 
-  return Component({ components });
+  return <Component components={components} />;
 }
