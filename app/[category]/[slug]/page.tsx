@@ -62,7 +62,7 @@ export default async function PostPage({ params }: PostPageProps) {
           className="w-full h-[400px] xl:h-[500px] object-cover"
         />
         <div className="pt-[100px] xl:pt-[120px] px-5 sm:px-8 lg:px-[60px] xl:px-0 flex justify-center">
-          <div className="max-w-[1300px]">
+          <div className="max-w-[1300px] w-full">
             <p className="text-sm !text-custom-accent font-semibold mb-2 uppercase">
               {post.category}
             </p>
@@ -79,9 +79,6 @@ export default async function PostPage({ params }: PostPageProps) {
                 </p>
               </div>
             </div>
-            <p className="sm:text-lg font-medium text-black leading-[22px] sm:leading-[25px] mt-5">
-              {post.description}
-            </p>
           </div>
         </div>
       </header>

@@ -1,7 +1,6 @@
 import { MDXComponents } from "mdx/types";
 import { TableComponent } from "./table-component";
 import { ImageComponent } from "./image-component";
-import Image from "next/image";
 
 export const mdxComponents: MDXComponents = {
   h1: ({ children }) => (
@@ -10,27 +9,27 @@ export const mdxComponents: MDXComponents = {
     </h1>
   ),
   h2: ({ children }) => (
-    <h2 className="text-black text-[48px] leading-12 sm:text-[60px] sm:leading-[60px] lg:text-[72px] lg:leading-[72px] tracking-tight font-bold font-familjen mt-10 mb-8 first:mt-0">
+    <h2 className="text-black text-[48px] leading-12 sm:text-[60px] sm:leading-[60px] lg:text-[72px] lg:leading-[72px] tracking-tight font-bold font-familjen mt-10 mb-8 first:-mt-4">
       {children}
     </h2>
   ),
   h3: ({ children }) => (
-    <h3 className="text-black text-[36px] leading-9 sm:text-[44px] sm:leading-11 lg:text-[52px] lg:leading-[52px] tracking-tight font-bold font-familjen mt-10 mb-8 first:mt-0">
+    <h3 className="text-black text-[36px] leading-9 sm:text-[44px] sm:leading-11 lg:text-[52px] lg:leading-[52px] tracking-tight font-bold font-familjen mt-10 mb-8 first:-mt-3">
       {children}
     </h3>
   ),
   h4: ({ children }) => (
-    <h4 className="text-black text-[28px] leading-7 sm:text-[34px] sm:leading-[34px] lg:text-[40px] lg:leading-10 tracking-tight font-semibold font-familjen mt-10 mb-8 first:mt-0">
+    <h4 className="text-black text-[28px] leading-7 sm:text-[34px] sm:leading-[34px] lg:text-[40px] lg:leading-10 tracking-tight font-semibold font-familjen mt-10 mb-8 first:-mt-3">
       {children}
     </h4>
   ),
   h5: ({ children }) => (
-    <h5 className="text-xl leading-5 sm:text-[22px] sm:leading-[22px]  xl:text-[26px] xl:leading-[26px] font-medium text-black font-familjen mt-10 mb-8 first:mt-0">
+    <h5 className="text-xl leading-5 sm:text-[22px] sm:leading-[22px]  xl:text-[26px] xl:leading-[26px] font-medium text-black font-familjen mt-10 mb-8 first:-mt-3">
       {children}
     </h5>
   ),
   p: ({ children }) => (
-    <p className="sm:text-lg font-medium text-black leading-[22px] sm:leading-[25px] mt-5 first:mt-0">
+    <p className="sm:text-lg font-medium text-black leading-[22px] sm:leading-[25px] mt-5 first:-mt-1">
       {children}
     </p>
   ),
