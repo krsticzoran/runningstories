@@ -2,8 +2,9 @@ import { MDXComponents } from "mdx/types";
 import { TableComponent } from "./table-component";
 import { ImageComponent } from "./image-component";
 import { Highlight } from "./highlight";
-import { BlockQuote } from "./BlockQuote";
+import { BlockQuote } from "./block-quote";
 import { WhiteBox } from "./white-box";
+import { Checklist } from "./checklist";
 
 export const mdxComponents: MDXComponents = {
   h1: ({ children }) => (
@@ -87,4 +88,5 @@ export const mdxComponents: MDXComponents = {
   Highlight: (props) => <Highlight {...props} />,
   BlockQuote: (props) => <BlockQuote {...props} />,
   WhiteBox: (props) => <WhiteBox {...props} />,
+  Checklist: (props) => <Checklist {...props} />,
 };

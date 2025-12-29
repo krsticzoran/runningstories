@@ -17,8 +17,8 @@ export function TableComponent({ data }: GenericTableProps) {
     <>
       {/* Desktop */}
       <div className="hidden lg:block overflow-x-auto mb-8">
-        <table className="w-full border border-[#ddd] text-left text-black leading-[22px]">
-          <thead className="bg-gray-200">
+        <table className="w-full border border-custom-gray text-left text-black leading-[22px]">
+          <thead className="bg-custom-gray">
             <tr>
               {columns.map((col) => (
                 <th key={col} className="px-4 py-4 font-semibold text-gray-700">
