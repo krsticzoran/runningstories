@@ -4,7 +4,7 @@ interface GenericTableProps {
   data: Record<string, ReactNode>[];
 }
 
-export function Table({ data }: GenericTableProps) {
+export function TableComponent({ data }: GenericTableProps) {
   if (!data || data.length === 0) return null;
 
   const columns = Object.keys(data[0]).filter((col) =>

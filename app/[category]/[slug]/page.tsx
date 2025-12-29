@@ -56,6 +56,8 @@ export default async function PostPage({ params }: PostPageProps) {
         <Image
           src={post.image}
           alt={post.imageAlt}
+          sizes="100vw"
+          quality={75}
           priority
           className="w-full h-[400px] xl:h-[500px] object-cover"
         />
