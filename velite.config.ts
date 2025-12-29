@@ -25,6 +25,7 @@ export default defineConfig({
             "vesti",
             "simonin-kutak",
             "intervjui",
+            "zdravlje",
           ]),
           image: s.image(),
           imageAlt: s.string().max(200),

@@ -52,20 +52,20 @@ export const mdxComponents: MDXComponents = {
   a: ({ href, children }) => (
     <a
       href={href}
-      className=""
+      className="underline underline-offset-2 text-custom-accent "
       target={href?.startsWith("http") ? "_blank" : undefined}
       rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
     >
       {children}
     </a>
   ),
-  hr: () => <hr className="h-0.5 w-full bg-[#ddd] my-10" />,
+  hr: () => <hr className="h-0.5 w-full bg-custom-gray my-10" />,
   code: ({ children }) => <code className="">{children}</code>,
   pre: ({ children }) => <pre className="">{children}</pre>,
 
   table: ({ children }) => (
     <div className="hidden lg:block overflow-x-auto mb-8">
-      <table className="w-full border border-[#ddd] text-left sm:text-lg font-medium text-black leading-[22px] sm:leading-[25px]">
+      <table className="w-full border border-custom-gray text-left sm:text-lg font-medium text-black leading-[22px] sm:leading-[25px]">
         {children}
       </table>
     </div>

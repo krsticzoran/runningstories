@@ -44,7 +44,7 @@ export function TableComponent({ data }: GenericTableProps) {
       {/* Mobile */}
       <div className="lg:hidden flex flex-col gap-6 mb-8">
         {data.map((row, idx) => (
-          <div key={idx} className="border border-[#ddd] p-4 rounded-md">
+          <div key={idx} className="border border-custom-gray p-4 rounded-md">
             {columns.map((col) => (
               <p key={col}>
                 <span className="font-semibold">{col}:</span> {row[col]}
