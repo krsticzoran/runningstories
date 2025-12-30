@@ -59,7 +59,7 @@ export default async function PostPage({ params }: PostPageProps) {
           sizes="100vw"
           quality={75}
           priority
-          className="w-full h-[400px] xl:h-[500px] object-cover"
+          className="w-full h-[400px] xl:h-[450px] 2xl:h-[600px] object-cover"
         />
         <div className="pt-[100px] xl:pt-[120px] px-5 sm:px-8 lg:px-[60px] xl:px-0 flex justify-center">
           <div className="max-w-[1300px] w-full">
