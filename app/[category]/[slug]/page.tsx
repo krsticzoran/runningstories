@@ -4,6 +4,8 @@ import { MDXContent } from "@/components/mdx/mdx-content";
 import { mdxComponents } from "@/components/mdx/mdx-components";
 import Image from "next/image";
 import Divider from "@/components/ui/divider";
+import { getPost } from "@/lib/content";
+import { formatDate } from "@/lib/date";
 
 interface PostPageProps {
   params: Promise<{
@@ -22,7 +24,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PostPageProps) {
   const { category, slug } = await params;
 
-  const post = posts.find((p) => p.category === category && p.slug === slug);
+  const post = getPost(category, slug);
 
   if (!post) return {};
 
@@ -35,16 +37,7 @@ export async function generateMetadata({ params }: PostPageProps) {
 export default async function PostPage({ params }: PostPageProps) {
   const { category, slug } = await params;
 
-  const post = posts.find((p) => p.category === category && p.slug === slug);
-
-  console.log("Looking for:", { category, slug });
-  console.log(
-    "Available posts:",
-    posts.map((p) => ({
-      categoryPath: p.category,
-      slug: p.slug,
-    }))
-  );
+  const post = getPost(category, slug);
 
   if (!post) {
     notFound();
@@ -77,11 +70,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   </span>
                 </p>
                 <p className="leading-[22px] text-custom-dark opacity-80">
-                  {new Date(post.date).toLocaleDateString("sr-Latn-RS", {
-                    day: "2-digit",
-                    month: "long",
-                    year: "numeric",
-                  })}
+                  {formatDate(post.date)}
                 </p>
               </div>
             </div>
