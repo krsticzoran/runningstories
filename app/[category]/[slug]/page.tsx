@@ -70,12 +70,18 @@ export default async function PostPage({ params }: PostPageProps) {
               <h1 className="text-black text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] lg:text-[100px]  lg:leading-[100px] tracking-tight  !font-instrument max-w-[1000px]">
                 {post.title}
               </h1>
-              <div className="flex gap-4">
+              <div className="flex  xl:flex-col gap-5 xl:gap-2 xl:mb-2.5">
                 <p className="flex gap-2 leading-[22px] font-medium text-custom-dark">
-                  Vreme čitanja:
                   <span className="font-semibold">
-                    {post.metadata.readingTime} min
+                    {post.metadata.readingTime} min čitanja
                   </span>
+                </p>
+                <p className="leading-[22px] text-custom-dark opacity-80">
+                  {new Date(post.date).toLocaleDateString("sr-Latn-RS", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                  })}
                 </p>
               </div>
             </div>
