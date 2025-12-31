@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="sr-Latn">
       <body
         className={`${inter.variable} ${familjenGrotesk.variable} ${instrumentSerif.variable} antialiased`}
       >
