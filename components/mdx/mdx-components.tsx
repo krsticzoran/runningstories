@@ -5,6 +5,7 @@ import { Highlight } from "./highlight";
 import { BlockQuote } from "./block-quote";
 import { WhiteBox } from "./white-box";
 import { Checklist } from "./checklist";
+import { ImageCredits } from "./image-credits";
 
 export const mdxComponents: MDXComponents = {
   h1: ({ children }) => (
@@ -89,4 +90,5 @@ export const mdxComponents: MDXComponents = {
   BlockQuote: (props) => <BlockQuote {...props} />,
   WhiteBox: (props) => <WhiteBox {...props} />,
   Checklist: (props) => <Checklist {...props} />,
+  ImageCredits: (props) => <ImageCredits {...props} />,
 };
