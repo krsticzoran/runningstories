@@ -6,7 +6,7 @@ import Menu from "./menu";
 
 export default function Header() {
   return (
-    <header className="h-20 fixed top-0 left-0 right-0 backdrop-blur-[20px] bg-black/25">
+    <header className="h-20 fixed top-0 left-0 right-0 backdrop-blur-[20px] bg-black/25 z-50">
       <div className="h-full px-5 ">
         <Container className="h-full flex items-center">
           <div className="flex w-full items-center justify-between h-full">
