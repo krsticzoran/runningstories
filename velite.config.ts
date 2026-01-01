@@ -24,12 +24,11 @@ export default defineConfig({
             "oprema",
             "vesti",
             "simonin-kutak",
-            "intervjui",
+            "zajednica",
             "zdravlje",
           ]),
           image: s.image(),
           imageAlt: s.string().max(200),
-          tags: s.array(s.string()).optional(),
           metadata: s.metadata(),
           content: s.mdx(),
         })

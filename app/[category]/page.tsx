@@ -82,7 +82,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               <h2 className="text-xl leading-5 sm:text-[22px] sm:leading-[22px] xl:text-[26px] xl:leading-[26px] font-medium text-black">
                 {categoryPosts[0].title}
               </h2>
-              <p className="leading-[22px] text-[#666] font-medium">
+              <p className="leading-[22px] text-[#666] font-medium line-clamp-3 sm:line-clamp-none">
                 {categoryPosts[0].description}
               </p>
             </div>
@@ -104,7 +104,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 />
               </div>
 
-              <div className="pt-6 px-5 pb-4 w-full flex flex-col gap-5 xl:gap-8">
+              <div className="pt-6 px-5 pb-4 w-full flex flex-col gap-5 xl:gap-8 ">
                 <p className="w-fit inline-flex items-center gap-1 py-1.5 px-3 bg-[#efefef] text-custom-dark text-sm leading-5 font-semibold">
                   <Clock size={14} className="opacity-70" />
                   {post.metadata.readingTime} min čitanja
@@ -115,7 +115,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                     {post.title}
                   </h2>
 
-                  <p className="leading-[22px] text-[#666] font-medium">
+                  <p className="leading-[22px] text-[#666] font-medium line-clamp-3 sm:line-clamp-2">
                     {post.description}
                   </p>
                 </div>

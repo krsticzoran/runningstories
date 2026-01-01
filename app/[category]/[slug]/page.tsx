@@ -86,18 +86,6 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
       </div>
       <Divider className="mb-[100px] lg:mb-[120px]" />
-      {post.tags && post.tags.length > 0 && (
-        <div className="mt-8 flex flex-wrap gap-2">
-          {post.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1 bg-gray-100 text-sm rounded-full"
-            >
-              #{tag}
-            </span>
-          ))}
-        </div>
-      )}
     </article>
   );
 }
