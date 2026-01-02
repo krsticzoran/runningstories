@@ -22,9 +22,8 @@ export default defineConfig({
           category: s.enum([
             "trening",
             "oprema",
-            "vesti",
             "simonin-kutak",
-            "zajednica",
+            "iz-sveta-trcanja",
             "zdravlje",
           ]),
           image: s.image(),

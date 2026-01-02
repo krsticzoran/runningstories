@@ -6,6 +6,7 @@ import Image from "next/image";
 import Divider from "@/components/ui/divider";
 import { getPost } from "@/lib/content";
 import { formatDate } from "@/lib/date";
+import Link from "next/link";
 
 interface PostPageProps {
   params: Promise<{
@@ -62,9 +63,11 @@ export default async function PostPage({ params }: PostPageProps) {
         />
         <div className="pt-[100px] xl:pt-[120px] px-5 sm:px-8 lg:px-[60px] xl:px-0 flex justify-center">
           <div className="max-w-[1300px] w-full">
-            <p className="text-sm !text-custom-accent font-semibold mb-2 uppercase">
-              {post.category}
-            </p>
+            <Link href={`/${post.category}`} className="inline-block">
+              <p className="text-sm !text-custom-accent font-semibold mb-2 uppercase">
+                {post.category.replace(/-/g, " ")}
+              </p>
+            </Link>
             <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
               <h1 className="text-black text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] lg:text-[100px]  lg:leading-[100px] tracking-tight  !font-instrument max-w-[1000px]">
                 {post.title}

@@ -6,6 +6,7 @@ import { BlockQuote } from "./block-quote";
 import { WhiteBox } from "./white-box";
 import { Checklist } from "./checklist";
 import { ImageCredits } from "./image-credits";
+import { YouTubeEmbed } from "./youtube-embed";
 
 export const mdxComponents: MDXComponents = {
   h1: ({ children }) => (
@@ -91,4 +92,5 @@ export const mdxComponents: MDXComponents = {
   WhiteBox: (props) => <WhiteBox {...props} />,
   Checklist: (props) => <Checklist {...props} />,
   ImageCredits: (props) => <ImageCredits {...props} />,
+  YouTubeEmbed: (props) => <YouTubeEmbed {...props} />,
 };

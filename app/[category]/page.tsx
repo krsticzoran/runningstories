@@ -32,7 +32,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     .filter((post) => post.category === category)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  if (!categoryPosts.length) {
+  if (!categoryPosts) {
     notFound();
   }
 

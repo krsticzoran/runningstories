@@ -41,7 +41,7 @@ export const categoriesData: Record<
     alt: "Simona na trkačkom treningu",
     excerpt: "Simonin kutak - svet trčanja kroz oči srednjoškolke",
   },
-  "iz sveta trcanja": {
+  "iz-sveta-trcanja": {
     title: "Iz sveta trčanja",
     description:
       "Vesti, priče i trendovi iz globalnog sveta trčanja – o današnjim herojima, kao i ljudima koji su kroz istoriju menjali trčanje .",

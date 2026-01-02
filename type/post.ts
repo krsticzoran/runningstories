@@ -5,13 +5,7 @@ export type Post = {
   slug: string;
   description: string;
   date: string;
-  category:
-    | "trening"
-    | "oprema"
-    | "vesti"
-    | "simonin-kutak"
-    | "zajednica"
-    | "zdravlje";
+  category: string;
   image: string | StaticImageData;
   imageAlt: string;
   metadata: Record<string, any>;
