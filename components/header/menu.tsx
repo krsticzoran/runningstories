@@ -6,7 +6,7 @@ import { SiInstagram, SiYoutube, SiTiktok } from "react-icons/si";
 import Link from "next/link";
 import Image from "next/image";
 
-import { getMenuLinks } from "@/data/menu-links";
+import { getMenuLinks } from "@/lib/menu";
 
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 

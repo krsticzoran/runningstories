@@ -13,19 +13,19 @@ export const categoriesData: Record<
     description:
       "Nauči kako da trčiš brže i duže - kompletan sistem treninga sa detaljnim nedeljnim planovima, ubrzanjima, intervalnim treninzima i raznovrsnim vežbama za sve nivoe iskustva i trkačke ciljeve",
     image: "/images/categories/trening.webp",
-    alt: "Osoba koja vežba trčanje",
+    alt: "mnoštvo trkača na Berlin maratonu",
     excerpt: "Trčiš bez plana? Nauči kako da trčiš duže i brže",
   },
   zdravlje: {
-    title: "Zdravlje",
+    title: "Zdravlje & Ishrana",
     description:
       "Otkrij koje su najčešće povrede kod trkača, zašto nastaju i kako ih sprečiti - sa praktičnim savetima o ishrani i regeneraciji. Nauči kako da održiš telo zdravim i sprečiš povrede pre nego što se desе.",
     image: "/images/categories/zdravlje.webp",
-    alt: "Zdrav trkač bez bolova",
+    alt: "Zena se isteže nako trčanja kako bi održala elastičnost i sprečila povrede",
     excerpt: "Zdravlje trkača - prevencija povreda, ishrana i regeneracija",
   },
   oprema: {
-    title: "Oprema",
+    title: "Trkačka oprema",
     description:
       "Pronađi pravu opremu za svoje trčanje - detaljni pregledi trkačkih patika, odeće, satova i gadžeta. Nauči kako da izabereš opremu koja će poboljšati tvoje performanse, pružiti komfor i zaštititi od povrede.",
     image: "/images/categories/oprema.webp",
@@ -40,12 +40,12 @@ export const categoriesData: Record<
     alt: "Simona na trkačkom treningu",
     excerpt: "Simonin kutak - svet trčanja kroz oči srednjoškolke",
   },
-  vesti: {
-    title: "Vesti",
+  "iz sveta trcanja": {
+    title: "Iz sveta trčanja",
     description:
-      "Najnovije informacije, događaji i novosti iz sveta trčanja i sporta. Pratite šta se dešava u zajednici i kako se sport razvija u regionu.",
-    image: "/images/categories/vesti.webp",
-    alt: "Trkački događaji i trkači na startu trke",
-    excerpt: "Sve novosti iz sveta trčanja i sportskih događaja",
+      "Vesti, priče i trendovi iz globalnog sveta trčanja – o današnjim herojima, kao i ljudima koji su kroz istoriju menjali trčanje .",
+    image: "/images/categories/iz-sveta-trcanja.webp",
+    alt: "Start velike međunarodne trke sa elitnim i rekreativnim trkačima",
+    excerpt: "Globalne vesti, priče i trendovi iz sveta trčanja",
   },
 };
