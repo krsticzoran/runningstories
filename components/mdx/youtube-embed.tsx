@@ -1,13 +1,29 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 interface YouTubeEmbedProps {
   url: string;
+  delay?: number;
 }
 
-export function YouTubeEmbed({ url }: YouTubeEmbedProps) {
+export function YouTubeEmbed({ url, delay = 2000 }: YouTubeEmbedProps) {
   const videoId = getYouTubeId(url);
+  const [shouldRender, setShouldRender] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShouldRender(true);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [delay]);
 
   if (!videoId) return null;
+
+  if (!shouldRender) {
+    return <div className="my-10 w-full aspect-video bg-gray-300 rounded-xl" />;
+  }
 
   return (
     <div className="my-10 w-full aspect-video overflow-hidden rounded-xl bg-black">
