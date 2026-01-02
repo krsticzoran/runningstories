@@ -5,6 +5,7 @@ export const categoriesData: Record<
     description: string;
     image: string;
     alt: string;
+    objectPosition?: "center" | "top" | "bottom";
     excerpt: string;
   }
 > = {

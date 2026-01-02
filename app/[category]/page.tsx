@@ -45,7 +45,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           fill
           quality={75}
           priority
-          className="object-cover z-0"
+          className={`object-cover z-0 ${
+            categoryMeta.objectPosition === "top"
+              ? "object-top"
+              : categoryMeta.objectPosition === "bottom"
+              ? "object-bottom"
+              : "object-center"
+          }`}
         />
       </div>
       <div className="pt-[100px] xl:pt-[120px] px-5 sm:px-8 lg:px-[60px] xl:px-0 flex justify-center">

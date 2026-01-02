@@ -31,6 +31,7 @@ export default defineConfig({
           imageAlt: s.string().max(200),
           metadata: s.metadata(),
           content: s.mdx(),
+          objectPosition: s.enum(["top", "center", "bottom"]).optional(),
         })
         .transform((data) => ({
           ...data,
