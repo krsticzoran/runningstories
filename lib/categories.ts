@@ -2,16 +2,13 @@ export const categoriesData: Record<
   string,
   {
     title: string;
-    description?: string;
-    image?: string;
-    alt?: string;
+    description: string;
+    image: string;
+    alt: string;
     objectPosition?: "center" | "top" | "bottom";
-    excerpt?: string;
+    excerpt: string;
   }
 > = {
-  "/": {
-    title: "Početna",
-  },
   trening: {
     title: "Trening",
     description:

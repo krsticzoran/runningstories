@@ -9,6 +9,7 @@ import Image from "next/image";
 import { getMenuLinks } from "@/lib/menu";
 
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
+import MenuLink from "./menu-link";
 
 export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,23 +88,15 @@ export default function Menu() {
           </button>
         </div>
         <nav className="flex h-full flex-col mt-[66px] gap-4">
-          {menuLinks.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setIsMenuOpen(false)}
-              className="group relative overflow-hidden font-familjen text-[22px] leading-[22px] font-medium h-[22px] block"
-            >
-              {/* default text */}
-              <span className="block translate-y-0 opacity-75 transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
-                {item.label}
-              </span>
+          <MenuLink href="/" label="Početna" setIsMenuOpen={setIsMenuOpen} />
 
-              {/* hover text */}
-              <span className="absolute left-0 top-full block translate-y-0 text-white transition-all duration-500 ease-in-out group-hover:-translate-y-full">
-                {item.label}
-              </span>
-            </Link>
+          {menuLinks.map((item) => (
+            <MenuLink
+              href={item.href}
+              label={item.label}
+              setIsMenuOpen={setIsMenuOpen}
+              key={item.href}
+            />
           ))}
         </nav>
         <div className="flex gap-4">
