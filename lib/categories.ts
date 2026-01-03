@@ -45,7 +45,7 @@ export const categoriesData: Record<
     title: "Iz sveta trčanja",
     description:
       "Vesti, priče i trendovi iz globalnog sveta trčanja – o današnjim herojima, kao i ljudima koji su kroz istoriju menjali trčanje .",
-    image: "/images/categories/iz-sveta-trcanja.webp",
+    image: "/images/categories/iz-sveta-trcanja.avif",
     alt: "Start velike međunarodne trke sa elitnim i rekreativnim trkačima",
     excerpt: "Globalne vesti, priče i trendovi iz sveta trčanja",
   },

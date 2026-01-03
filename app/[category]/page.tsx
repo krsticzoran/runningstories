@@ -8,6 +8,8 @@ interface CategoryPageProps {
   params: Promise<{ category: string }>;
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return Object.keys(categoriesData).map((category) => ({
     category,
@@ -20,12 +22,29 @@ export async function generateMetadata({ params }: CategoryPageProps) {
   const categoryMeta = categoriesData[category];
 
   if (!categoryMeta) {
-    return {};
+    notFound();
   }
 
   return {
     title: categoryMeta.title,
     description: categoryMeta.description,
+    alternates: {
+      canonical: `https://trkackeprice.com/${category}`,
+    },
+    openGraph: {
+      title: categoryMeta.title,
+      description: categoryMeta.description,
+      url: `https://trkackeprice.com/${category}`,
+      type: "website",
+      images: [
+        {
+          url: categoryMeta.image,
+          alt: categoryMeta.alt,
+          width: 1200,
+          height: 600,
+        },
+      ],
+    },
   };
 }
 
