@@ -26,7 +26,9 @@ export function CategoryCard({ post, variant = "regular" }: PostCardProps) {
         <Image
           src={post.image}
           alt={post.imageAlt}
+          quality={70}
           fill
+          sizes="(min-width: 1280px) 650px, 100vw"
           className="object-cover hover:scale-110 transition-all duration-300"
         />
       </div>
