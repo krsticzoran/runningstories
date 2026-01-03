@@ -44,6 +44,7 @@ export default function Menu() {
           <Image
             src={headerImage}
             fill
+            quality={60}
             alt="running women"
             className="object-cover"
             priority
