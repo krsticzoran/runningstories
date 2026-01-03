@@ -21,7 +21,7 @@ export const categoriesData: Record<
     title: "Zdravlje & Ishrana",
     description:
       "Otkrij koje su najčešće povrede kod trkača, zašto nastaju i kako ih sprečiti - sa praktičnim savetima o ishrani i regeneraciji. Nauči kako da održiš telo zdravim i sprečiš povrede pre nego što se desе.",
-    image: "/images/categories/zdravlje.webp",
+    image: "/images/categories/zdravlje.avif",
     alt: "Zena se isteže nako trčanja kako bi održala elastičnost i sprečila povrede",
     excerpt: "Zdravlje trkača - prevencija povreda, ishrana i regeneracija",
   },
@@ -29,7 +29,7 @@ export const categoriesData: Record<
     title: "Trkačka oprema",
     description:
       "Pronađi pravu opremu za svoje trčanje - detaljni pregledi trkačkih patika, odeće, satova i gadžeta. Nauči kako da izabereš opremu koja će poboljšati tvoje performanse, pružiti komfor i zaštititi od povrede.",
-    image: "/images/categories/oprema.webp",
+    image: "/images/categories/oprema.avif",
     alt: "Trkačka oprema - patike, sat i odeća",
     excerpt: "Pronađi opremu koja pravi razliku - patike, satovi i odeća",
   },
