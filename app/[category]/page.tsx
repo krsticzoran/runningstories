@@ -45,6 +45,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           fill
           quality={75}
           priority
+          sizes="100vw"
           className={`object-cover z-0 ${
             categoryMeta.objectPosition === "top"
               ? "object-top"
