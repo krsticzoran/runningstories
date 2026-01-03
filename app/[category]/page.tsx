@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: CategoryPageProps) {
       type: "website",
       images: [
         {
-          url: categoryMeta.image,
+          url: categoryMeta.image.src,
           alt: categoryMeta.alt,
           width: 1200,
           height: 600,

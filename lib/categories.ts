@@ -1,9 +1,16 @@
+import treningImg from "@/assets/images/categories/trening.webp";
+import zdravljeImg from "@/assets/images/categories/zdravlje.webp";
+import opremaImg from "@/assets/images/categories/oprema.webp";
+import simoninKutakImg from "@/assets/images/categories/trening.webp";
+import izSvetaTrcanjaImg from "@/assets/images/categories/iz-sveta-trcanja.webp";
+import { StaticImageData } from "next/image";
+
 export const categoriesData: Record<
   string,
   {
     title: string;
     description: string;
-    image: string;
+    image: StaticImageData;
     alt: string;
     objectPosition?: "center" | "top" | "bottom";
     excerpt: string;
@@ -13,7 +20,7 @@ export const categoriesData: Record<
     title: "Trening",
     description:
       "Nauči kako da trčiš brže i duže - kompletan sistem treninga sa detaljnim nedeljnim planovima, ubrzanjima, intervalnim treninzima i raznovrsnim vežbama za sve nivoe iskustva i trkačke ciljeve",
-    image: "/images/categories/trening.webp",
+    image: treningImg,
     alt: "mnoštvo trkača na Berlin maratonu",
     excerpt: "Trčiš bez plana? Nauči kako da trčiš duže i brže",
   },
@@ -21,7 +28,7 @@ export const categoriesData: Record<
     title: "Zdravlje & Ishrana",
     description:
       "Otkrij koje su najčešće povrede kod trkača, zašto nastaju i kako ih sprečiti - sa praktičnim savetima o ishrani i regeneraciji. Nauči kako da održiš telo zdravim i sprečiš povrede pre nego što se desе.",
-    image: "/images/categories/zdravlje.avif",
+    image: zdravljeImg,
     alt: "Zena se isteže nako trčanja kako bi održala elastičnost i sprečila povrede",
     excerpt: "Zdravlje trkača - prevencija povreda, ishrana i regeneracija",
   },
@@ -29,7 +36,7 @@ export const categoriesData: Record<
     title: "Trkačka oprema",
     description:
       "Pronađi pravu opremu za svoje trčanje - detaljni pregledi trkačkih patika, odeće, satova i gadžeta. Nauči kako da izabereš opremu koja će poboljšati tvoje performanse, pružiti komfor i zaštititi od povrede.",
-    image: "/images/categories/oprema.avif",
+    image: opremaImg,
     alt: "Trkačka oprema - patike, sat i odeća",
     excerpt: "Pronađi opremu koja pravi razliku - patike, satovi i odeća",
   },
@@ -37,7 +44,8 @@ export const categoriesData: Record<
     title: "Simonin kutak",
     description:
       "Simona će sa vama deliti svoja zapazanja i emocije sa treninga i trka, kao i deliti savete kako da trčanje uklopite u svakodnevne obaveze jednog tinejdžera.",
-    image: "/images/categories/trening.webp",
+    image: simoninKutakImg,
+
     alt: "Simona na trkačkom treningu",
     excerpt: "Simonin kutak - svet trčanja kroz oči srednjoškolke",
   },
@@ -45,7 +53,7 @@ export const categoriesData: Record<
     title: "Iz sveta trčanja",
     description:
       "Vesti, priče i trendovi iz globalnog sveta trčanja – o današnjim herojima, kao i ljudima koji su kroz istoriju menjali trčanje .",
-    image: "/images/categories/iz-sveta-trcanja.avif",
+    image: izSvetaTrcanjaImg,
     alt: "Start velike međunarodne trke sa elitnim i rekreativnim trkačima",
     excerpt: "Globalne vesti, priče i trendovi iz sveta trčanja",
   },

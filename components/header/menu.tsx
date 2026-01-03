@@ -9,6 +9,7 @@ import { getMenuLinks } from "@/lib/menu";
 
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import MenuLink from "./menu-link";
+import headerImage from "@/assets/images/header/header-image.webp";
 
 export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +42,7 @@ export default function Menu() {
         <SheetTitle className="sr-only">running image</SheetTitle>
         <div className="relative h-full w-full">
           <Image
-            src="/header-image.webp"
+            src={headerImage}
             fill
             alt="running women"
             className="object-cover"
