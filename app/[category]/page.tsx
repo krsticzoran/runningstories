@@ -8,6 +8,12 @@ interface CategoryPageProps {
   params: Promise<{ category: string }>;
 }
 
+export async function generateStaticParams() {
+  return Object.keys(categoriesData).map((category) => ({
+    category,
+  }));
+}
+
 export async function generateMetadata({ params }: CategoryPageProps) {
   const { category } = await params;
 
