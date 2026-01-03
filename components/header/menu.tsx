@@ -40,12 +40,13 @@ export default function Menu() {
         className=" hidden md:block md:w-2/3 xl:w-3/4 [&>button]:hidden border-0!"
       >
         <SheetTitle className="sr-only">running image</SheetTitle>
-        <div className="relative h-full w-full">
+        <div className="relative h-screen w-full">
           <Image
             src={headerImage}
             fill
             alt="running women"
             className="object-cover"
+            priority
           />
           <div className="absolute left-4 top-7 z-50  ">
             <div className="flex gap-2">
