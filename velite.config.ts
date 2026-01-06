@@ -25,6 +25,7 @@ export default defineConfig({
             "simonin-kutak",
             "iz-sveta-trcanja",
             "zdravlje",
+            "zajednica",
           ]),
           image: s.image(),
           imageAlt: s.string().max(200),

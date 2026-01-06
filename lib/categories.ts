@@ -3,6 +3,7 @@ import zdravljeImg from "@/assets/images/categories/zdravlje.webp";
 import opremaImg from "@/assets/images/categories/oprema.webp";
 import simoninKutakImg from "@/assets/images/categories/trening.webp";
 import izSvetaTrcanjaImg from "@/assets/images/categories/iz-sveta-trcanja.webp";
+import zajednicaImg from "@/assets/images/categories/zajednica.webp";
 import { StaticImageData } from "next/image";
 
 export const categoriesData: Record<
@@ -33,7 +34,7 @@ export const categoriesData: Record<
     excerpt: "Zdravlje trkača - prevencija povreda, ishrana i regeneracija",
   },
   oprema: {
-    title: "Trkačka oprema",
+    title: "Oprema",
     description:
       "Pronađi pravu opremu za svoje trčanje - detaljni pregledi trkačkih patika, odeće, satova i gadžeta. Nauči kako da izabereš opremu koja će poboljšati tvoje performanse, pružiti komfor i zaštititi od povrede.",
     image: opremaImg,
@@ -48,6 +49,14 @@ export const categoriesData: Record<
 
     alt: "Simona na trkačkom treningu",
     excerpt: "Simonin kutak - svet trčanja kroz oči srednjoškolke",
+  },
+  zajednica: {
+    title: "Zajednica",
+    description:
+      "Mnoštvo priča običnih trkača iz regiona, zašto su počeli da trče i sta im je trčanje donelo, kao i utiske sa trka",
+    image: zajednicaImg,
+    alt: "Grupa trkača u novogodišnjem izdanju",
+    excerpt: "Priče običnih trkača koje inspirišu više nego medalje",
   },
   "iz-sveta-trcanja": {
     title: "Iz sveta trčanja",
