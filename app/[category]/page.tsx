@@ -68,7 +68,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           src={categoryMeta.image}
           alt={categoryMeta.alt}
           fill
-          quality={60}
+          quality={75}
           priority
           sizes="100vw"
           className={`object-cover z-0 ${

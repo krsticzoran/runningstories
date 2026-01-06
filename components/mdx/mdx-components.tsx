@@ -7,6 +7,7 @@ import { WhiteBox } from "./white-box";
 import { Checklist } from "./checklist";
 import { ImageCredits } from "./image-credits";
 import { YouTubeEmbed } from "./youtube-embed";
+import { GalleryImage, ImageGallery } from "./image-galery";
 
 export const mdxComponents: MDXComponents = {
   h1: ({ children }) => (
@@ -93,4 +94,6 @@ export const mdxComponents: MDXComponents = {
   Checklist: (props) => <Checklist {...props} />,
   ImageCredits: (props) => <ImageCredits {...props} />,
   YouTubeEmbed: (props) => <YouTubeEmbed {...props} />,
+  GalleryImage: (props) => <GalleryImage {...props} />,
+  ImageGallery: (props) => <ImageGallery {...props} />,
 };
