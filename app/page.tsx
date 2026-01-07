@@ -1,10 +1,12 @@
+import HomeHero from "@/components/home/HomeHero";
+import HomeTraining from "@/components/home/HomeTraining";
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="w-full">
-        <div className="min-h-screen"></div>
-        <div className="min-h-screen"></div>
-      </main>
+    <div className="mt-20">
+      <HomeHero />
+      <HomeTraining />
+      <div className="min-h-screen bg-custom-gray"></div>
     </div>
   );
 }

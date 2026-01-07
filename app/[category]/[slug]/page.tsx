@@ -7,6 +7,7 @@ import Divider from "@/components/ui/divider";
 import { getPost } from "@/lib/content";
 import { formatDate } from "@/lib/date";
 import Link from "next/link";
+import { Container } from "@/components/layout/container";
 
 interface PostPageProps {
   params: Promise<{
@@ -61,39 +62,36 @@ export default async function PostPage({ params }: PostPageProps) {
               : "object-center"
           }`}
         />
-        <div className="pt-[100px] xl:pt-[120px] px-5 sm:px-8 lg:px-[60px] xl:px-0 flex justify-center">
-          <div className="max-w-[1300px] w-full">
-            <Link href={`/${post.category}`} className="inline-block">
-              <p className="text-sm !text-custom-accent font-semibold mb-2 uppercase">
-                {post.category.replace(/-/g, " ")}
+        <Container className="pt-[100px] xl:pt-[120px]">
+          <Link href={`/${post.category}`} className="inline-block">
+            <p className="text-sm !text-custom-accent font-semibold mb-2 uppercase">
+              {post.category.replace(/-/g, " ")}
+            </p>
+          </Link>
+          <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
+            <h1 className="text-black text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] lg:text-[100px]  lg:leading-[100px] tracking-tight  !font-instrument max-w-[1000px]">
+              {post.title}
+            </h1>
+            <div className="flex  xl:flex-col gap-5 xl:gap-2 xl:mb-2.5">
+              <p className="flex gap-2 leading-[22px] font-medium text-custom-dark">
+                <span className="font-semibold">
+                  {post.metadata.readingTime} min čitanja
+                </span>
               </p>
-            </Link>
-            <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
-              <h1 className="text-black text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] lg:text-[100px]  lg:leading-[100px] tracking-tight  !font-instrument max-w-[1000px]">
-                {post.title}
-              </h1>
-              <div className="flex  xl:flex-col gap-5 xl:gap-2 xl:mb-2.5">
-                <p className="flex gap-2 leading-[22px] font-medium text-custom-dark">
-                  <span className="font-semibold">
-                    {post.metadata.readingTime} min čitanja
-                  </span>
-                </p>
-                <p className="leading-[22px] text-custom-dark opacity-80">
-                  {formatDate(post.date)}
-                </p>
-              </div>
+              <p className="leading-[22px] text-custom-dark opacity-80">
+                {formatDate(post.date)}
+              </p>
             </div>
           </div>
-        </div>
+        </Container>
       </header>
 
       <Divider />
 
-      <div className="flex flex-col justify-center items-center ">
-        <div className="max-w-[1300px] px-5 sm:px-8 lg:px-[60px] xl:px-0 ">
-          <MDXContent code={post.content} components={mdxComponents} />
-        </div>
-      </div>
+      <Container>
+        <MDXContent code={post.content} components={mdxComponents} />
+      </Container>
+
       <Divider className="mb-[100px] lg:mb-[120px]" />
     </article>
   );

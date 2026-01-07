@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { categoriesData } from "@/lib/categories";
 import { CategoryCard } from "@/components/cards/categroy-card";
+import { Container } from "@/components/layout/container";
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
@@ -80,24 +81,22 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           }`}
         />
       </div>
-      <div className="pt-[100px] xl:pt-[120px] px-5 sm:px-8 lg:px-[60px] xl:px-0 flex justify-center">
-        <div className="max-w-[1300px] w-full">
-          <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
-            <h1 className="text-black text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] lg:text-[100px]  lg:leading-[100px] tracking-tight  !font-instrument max-w-[1000px] capitalize">
-              {categoryMeta.excerpt}
-            </h1>
-          </div>
+      <Container className="pt-[100px] xl:pt-[120px]">
+        <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
+          <h1 className="text-black text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] lg:text-[100px]  lg:leading-[100px] tracking-tight  !font-instrument max-w-[1000px] capitalize">
+            {categoryMeta.excerpt}
+          </h1>
         </div>
-      </div>
+      </Container>
 
-      <div className="px-5 sm:px-8 lg:px-[60px] xl:px-0 max-w-[1300px] w-full mx-auto mt-[120px] flex flex-col gap-3">
+      <Container className="mt-[120px] flex flex-col gap-3">
         <CategoryCard post={categoryPosts[0]} variant="featured" />
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
           {categoryPosts.slice(1).map((post) => (
             <CategoryCard post={post} key={post.slug} />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

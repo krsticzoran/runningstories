@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Familjen_Grotesk, Instrument_Serif } from "next/font/google";
 
 import "./globals.css";
-import Header from "@/components/header/header";
+import Header from "@/components/layout/header/header";
 
 const inter = Inter({
   variable: "--font-inter",

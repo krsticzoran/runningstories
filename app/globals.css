@@ -150,3 +150,23 @@
     @apply font-familjen;
   }
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.auto-scroll {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.auto-scroll:hover {
+  animation-play-state: paused;
+}
