@@ -81,15 +81,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           }`}
         />
       </div>
-      <Container className="pt-[100px] xl:pt-[120px]">
-        <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
-          <h1 className="text-black max-w-[1000px] capitalize">
-            {categoryMeta.excerpt}
-          </h1>
-        </div>
+      <Container className="pt-16 sm:pt-20 xl:pt-24">
+        <h1 className="text-black max-w-[1000px] capitalize mb-10 xl:mb-14">
+          {categoryMeta.excerpt}
+        </h1>
       </Container>
 
-      <Container className="pt-20 sm:pt-24 flex flex-col gap-3">
+      <Container className="flex flex-col gap-3">
         <CategoryCard post={categoryPosts[0]} variant="featured" />
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
           {categoryPosts.slice(1).map((post) => (

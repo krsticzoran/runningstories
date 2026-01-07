@@ -6,10 +6,16 @@ import { Post } from "@/type/post";
 interface PostCardProps {
   post: Post;
   variant?: "featured" | "regular";
+  titleAs?: "h2" | "h3" | "h4";
 }
 
-export function CategoryCard({ post, variant = "regular" }: PostCardProps) {
+export function CategoryCard({
+  post,
+  variant = "regular",
+  titleAs = "h2",
+}: PostCardProps) {
   const isFeatured = variant === "featured";
+  const TitleTag = titleAs;
 
   return (
     <Link
@@ -41,11 +47,11 @@ export function CategoryCard({ post, variant = "regular" }: PostCardProps) {
           <Clock size={14} className="opacity-70" />
           {post.metadata.readingTime} min čitanja
         </p>
-        <h2
+        <TitleTag
           className={`text-xl sm:text-[22px] xl:text-[26px] font-medium text-black`}
         >
           {post.title}
-        </h2>
+        </TitleTag>
         <p className="leading-[22px] text-[#666] font-medium line-clamp-3 sm:line-clamp-2">
           {post.description}
         </p>

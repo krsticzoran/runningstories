@@ -62,7 +62,7 @@ export default async function PostPage({ params }: PostPageProps) {
               : "object-center"
           }`}
         />
-        <Container className="pt-[100px] xl:pt-[120px]">
+        <Container className="pt-16 sm:pt-20 xl:pt-24">
           <Link href={`/${post.category}`} className="inline-block">
             <p className="text-sm !text-custom-accent font-semibold mb-2 uppercase">
               {post.category.replace(/-/g, " ")}

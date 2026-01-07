@@ -142,7 +142,7 @@
   }
 
   h1 {
-    @apply text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] lg:text-[100px] lg:leading-[100px] tracking-tight font-instrument;
+    @apply text-[60px] leading-[60px] sm:text-[84px] sm:leading-[84px] lg:text-[100px] lg:leading-[100px] tracking-tight font-instrument;
   }
 
   h2,

@@ -10,11 +10,14 @@ export default function HomeTraining() {
 
   return (
     <section className="bg-bg-secondary py-[100px] xl:py-[120px]">
-      <Container className="flex flex-col gap-3">
-        <CategoryCard post={categoryPosts[0]} variant="featured" />
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
+      <Container className="flex flex-col">
+        <h2 className="text-[40px] sm:text-[48px] xl:text-[56px] leading-tight text-black pb-3 uppercase font-medium mb-4 xl:mb-6">
+          Trening
+        </h2>
+        <CategoryCard post={categoryPosts[0]} variant="featured" titleAs="h3" />
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 mt-3">
           {categoryPosts.slice(1).map((post) => (
-            <CategoryCard post={post} key={post.slug} />
+            <CategoryCard post={post} key={post.slug} titleAs="h3" />
           ))}
         </div>
       </Container>
