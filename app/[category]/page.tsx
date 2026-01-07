@@ -89,7 +89,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
       </Container>
 
-      <Container className="pt-[100px] xl:pt-[120px] flex flex-col gap-3">
+      <Container className="pt-20 sm:pt-24 flex flex-col gap-3">
         <CategoryCard post={categoryPosts[0]} variant="featured" />
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
           {categoryPosts.slice(1).map((post) => (
