@@ -20,16 +20,14 @@ export default function HomeHero() {
       />
       <Container>
         <div className="">
-          <div className="max-w-2xl xl:w-2xl">
-            <h1 className="-mt-2 text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] xl:text-[100px] xl:leading-[100px] !font-instrument">
-              Svaka trka ima svoju priču.
-            </h1>
+          <h1 className="-mt-2 max-w-xl xl:w-xl">
+            Svaka trka ima svoju priču.
+          </h1>
 
-            <p className="mt-4 sm:mt-5 xl:mt-6 text-[#eee] leading-[22px] sm:text-lg sm:leading-[25px] max-w-2xl">
-              Od prvih kilometara do ličnih pobeda, kroz iskustva trkača iz
-              zajednice.
-            </p>
-          </div>
+          <p className="mt-4 sm:mt-5 xl:mt-6 text-[#eee] leading-[22px] sm:text-lg sm:leading-[25px] max-w-2xl">
+            Od prvih kilometara do ličnih pobeda, kroz iskustva trkača iz
+            zajednice.
+          </p>
         </div>
 
         <div className="pt-20 sm:pt-24">

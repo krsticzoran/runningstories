@@ -83,7 +83,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       </div>
       <Container className="pt-[100px] xl:pt-[120px]">
         <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
-          <h1 className="text-black text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] lg:text-[100px]  lg:leading-[100px] tracking-tight  !font-instrument max-w-[1000px] capitalize">
+          <h1 className="text-black max-w-[1000px] capitalize">
             {categoryMeta.excerpt}
           </h1>
         </div>

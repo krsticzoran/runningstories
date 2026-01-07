@@ -69,9 +69,7 @@ export default async function PostPage({ params }: PostPageProps) {
             </p>
           </Link>
           <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
-            <h1 className="text-black text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] lg:text-[100px]  lg:leading-[100px] tracking-tight  !font-instrument max-w-[1000px]">
-              {post.title}
-            </h1>
+            <h1 className="text-black max-w-[1000px]">{post.title}</h1>
             <div className="flex  xl:flex-col gap-5 xl:gap-2 xl:mb-2.5">
               <p className="flex gap-2 leading-[22px] font-medium text-custom-dark">
                 <span className="font-semibold">
