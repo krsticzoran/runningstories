@@ -14,7 +14,7 @@ export default function Header() {
               <span className="text-white font-familjen text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
                 Trkačke
               </span>
-              <span className="text-[#222] font-familjen text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
+              <span className="text-custom-accent font-familjen text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
                 Priče
               </span>
             </Link>
