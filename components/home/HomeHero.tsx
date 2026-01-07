@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { posts } from "#site/content";
 import { Container } from "../layout/container";
-import runnersImage from "@/assets/images/home/runners2.png";
+import runnersImage from "@/assets/images/home/runners.png";
 
 export default function HomeHero() {
   const featuredPosts = posts.filter((p) => p.featured).slice(0, 3);
@@ -18,21 +18,21 @@ export default function HomeHero() {
           backgroundSize: "100% 80%",
         }}
       />
-      <Container className="pt-28">
+      <Container className="py-[100px] xl:py-[120px]">
         <div className="flex justify-between">
           <div className="max-w-2xl xl:w-2xl">
             <h1 className="text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] xl:text-[100px] xl:leading-[100px] !font-instrument">
               Svaka trka ima svoju priču.
             </h1>
 
-            <p className="mt-6 text-[#eee] leading-[22px] sm:text-lg sm:leading-[25px] max-w-2xl">
+            <p className="mt-4 sm:mt-5 xl:mt-6 text-[#eee] leading-[22px] sm:text-lg sm:leading-[25px] max-w-2xl">
               Od prvih kilometara do ličnih pobeda, kroz iskustva trkača iz
               zajednice.
             </p>
           </div>
         </div>
 
-        <div className="py-24">
+        <div className="pt-20 sm:pt-24">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {featuredPosts.map((post) => (
               <Link

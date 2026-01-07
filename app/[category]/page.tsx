@@ -63,7 +63,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   }
 
   return (
-    <section className="bg-bg-secondary pb-[120px]">
+    <section className="bg-bg-secondary  pb-[100px] xl:pb-[120px]">
       <div className="relative w-full h-[400px] xl:h-[450px] 2xl:h-[600px] ">
         <Image
           src={categoryMeta.image}
