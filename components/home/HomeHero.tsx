@@ -1,34 +1,44 @@
 import Link from "next/link";
 import Image from "next/image";
 import { posts } from "#site/content";
-import { getMenuLinks } from "@/lib/menu";
 import { Container } from "../layout/container";
+import runnersImage from "@/assets/images/home/runners2.png";
 
 export default function HomeHero() {
-  const menuLinks = getMenuLinks();
   const featuredPosts = posts.filter((p) => p.featured).slice(0, 3);
 
   return (
-    <section className="bg-black text-white min-h-[65vh] ">
-      <Container className=" flex flex-col justify-between">
-        <div className="max-w-2xl">
-          <h1 className="text-[100px] leading-[100px] !font-instrument">
-            Svaka trka ima svoju priču.
-          </h1>
+    <section className="bg-black text-white relative">
+      <div
+        className="hidden xl:block absolute top-0 right-0 h-full w-1/2"
+        style={{
+          backgroundImage: `url(${runnersImage.src})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "right center",
+          backgroundSize: "100% 80%",
+        }}
+      />
+      <Container className="pt-28">
+        <div className="flex justify-between">
+          <div className="max-w-2xl xl:w-2xl">
+            <h1 className="text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] xl:text-[100px] xl:leading-[100px] !font-instrument">
+              Svaka trka ima svoju priču.
+            </h1>
 
-          <p className="mt-6 text-[#eee] text-lg leading-[25px] max-w-2xl">
-            Od prvih kilometara do ličnih pobeda, kroz iskustva trkača iz
-            zajednice.
-          </p>
+            <p className="mt-6 text-[#eee] leading-[22px] sm:text-lg sm:leading-[25px] max-w-2xl">
+              Od prvih kilometara do ličnih pobeda, kroz iskustva trkača iz
+              zajednice.
+            </p>
+          </div>
         </div>
 
-        <div className="mt-20">
+        <div className="py-24">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {featuredPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/${post.category}/${post.slug}`}
-                className="relative  h-[220px] overflow-hidden p-1 bg-[#1b1b1b]"
+                className="relative  h-60 overflow-hidden p-1 bg-[#1b1b1b]"
               >
                 <Image
                   src={post.image}
@@ -41,22 +51,6 @@ export default function HomeHero() {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-        <div className="mt-12 overflow-hidden">
-          <div className="auto-scroll">
-            {menuLinks
-              .concat(menuLinks)
-              .concat(menuLinks)
-              .map((link, index) => (
-                <Link
-                  key={index}
-                  href={link.href}
-                  className="px-4 py-2 hover:bg-white/20 rounded-full text-white whitespace-nowrap font-medium"
-                >
-                  {link.label}
-                </Link>
-              ))}
           </div>
         </div>
       </Container>

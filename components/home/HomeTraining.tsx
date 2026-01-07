@@ -9,8 +9,8 @@ export default function HomeTraining() {
     .slice(0, 3);
 
   return (
-    <section className="bg-bg-secondary">
-      <Container className="mt-[120px] flex flex-col gap-3">
+    <section className="bg-bg-secondary py-[100px] xl:py-[120px]">
+      <Container className="flex flex-col gap-3">
         <CategoryCard post={categoryPosts[0]} variant="featured" />
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
           {categoryPosts.slice(1).map((post) => (
