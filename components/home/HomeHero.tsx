@@ -34,7 +34,7 @@ export default function HomeHero() {
 
         <div className="pt-20 sm:pt-24">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {featuredPosts.map((post) => (
+            {featuredPosts.map((post, index) => (
               <Link
                 key={post.slug}
                 href={`/${post.category}/${post.slug}`}
@@ -44,6 +44,7 @@ export default function HomeHero() {
                   src={post.image}
                   alt={post.imageAlt}
                   fill
+                  priority={index === 0} //
                   className="object-cover hover:scale-105 transition-all duration-300"
                 />
                 <div className="absolute bottom-0 left-0 right-0 px-2 py-1.5 text-white z-10 text-sm backdrop-blur-[20px] bg-black/25">
