@@ -8,7 +8,7 @@ export default function HomeHero() {
   const featuredPosts = posts.filter((p) => p.featured).slice(0, 3);
 
   return (
-    <section className="bg-black text-white relative">
+    <section className="bg-black text-white relative py-[100px] xl:py-[120px]">
       <div
         className="hidden xl:block absolute top-0 right-0 h-full w-1/2"
         style={{
@@ -18,10 +18,10 @@ export default function HomeHero() {
           backgroundSize: "100% 80%",
         }}
       />
-      <Container className="py-[100px] xl:py-[120px]">
-        <div className="flex justify-between">
+      <Container>
+        <div className="">
           <div className="max-w-2xl xl:w-2xl">
-            <h1 className="text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] xl:text-[100px] xl:leading-[100px] !font-instrument">
+            <h1 className="-mt-2 text-[68px] leading-[68px] sm:text-[84px] sm:leading-[84px] xl:text-[100px] xl:leading-[100px] !font-instrument">
               Svaka trka ima svoju priču.
             </h1>
 
