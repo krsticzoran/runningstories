@@ -3,6 +3,7 @@ import { Inter, Familjen_Grotesk, Instrument_Serif } from "next/font/google";
 
 import "./globals.css";
 import Header from "@/components/layout/header/header";
+import { Footer } from "@/components/layout/footer/footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -41,6 +42,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

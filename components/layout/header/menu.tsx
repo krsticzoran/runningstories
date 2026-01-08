@@ -54,7 +54,7 @@ export default function Menu() {
               <span className="text-white font-familjen font-bold text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
                 Trkačke
               </span>
-              <span className="text-black font-familjen font-bold text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
+              <span className="text-custom-accent font-familjen font-bold text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
                 Priče
               </span>
             </div>
@@ -102,9 +102,32 @@ export default function Menu() {
           ))}
         </nav>
         <div className="flex gap-4">
-          <SiInstagram className="w-5 h-5 text-white opacity-75 cursor-pointer hover:opacity-100 transition" />
-          <SiYoutube className="w-5 h-5 text-white opacity-75 cursor-pointer hover:opacity-100 transition" />
-          <SiTiktok className="w-5 h-5 text-white opacity-75 cursor-pointer hover:opacity-100 transition" />
+          <a
+            href="https://www.instagram.com/trkacke.price/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <SiInstagram className="w-5 h-5 text-white opacity-75 hover:opacity-100 transition" />
+          </a>
+
+          <a
+            href="https://www.youtube.com/@trkacke_price"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <SiYoutube className="w-5 h-5 text-white opacity-75 hover:opacity-100 transition" />
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@trkacke_price"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+          >
+            <SiTiktok className="w-5 h-5 text-white opacity-75 hover:opacity-100 transition" />
+          </a>
         </div>
       </SheetContent>
     </Sheet>

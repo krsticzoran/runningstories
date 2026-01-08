@@ -6,7 +6,6 @@ export default function Home() {
     <div className="mt-20">
       <HomeHero />
       <HomeTraining />
-      <div className="min-h-screen bg-custom-gray"></div>
     </div>
   );
 }
