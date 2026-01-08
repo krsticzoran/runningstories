@@ -27,13 +27,13 @@ export async function generateMetadata({ params }: CategoryPageProps) {
   }
 
   return {
-    title: categoryMeta.title,
+    title: `Trkačke priče  - ${categoryMeta.title}`,
     description: categoryMeta.description,
     alternates: {
       canonical: `https://trkackeprice.com/${category}`,
     },
     openGraph: {
-      title: categoryMeta.title,
+      title: `Trkačke priče  - ${categoryMeta.title}`,
       description: categoryMeta.description,
       url: `https://trkackeprice.com/${category}`,
       type: "website",

@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PostPageProps) {
   if (!post) return {};
 
   return {
-    title: post.title,
+    title: `Trkačke priče  - ${post.title}`,
     description: post.description,
   };
 }
