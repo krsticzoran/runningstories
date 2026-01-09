@@ -1,7 +1,7 @@
 import treningImg from "@/assets/images/categories/trening.webp";
 import zdravljeImg from "@/assets/images/categories/zdravlje.webp";
 import opremaImg from "@/assets/images/categories/oprema.webp";
-import simoninKutakImg from "@/assets/images/categories/trening.webp";
+import simoninKutakImg from "@/assets/images/categories/simona.webp";
 import izSvetaTrcanjaImg from "@/assets/images/categories/iz-sveta-trcanja.webp";
 import zajednicaImg from "@/assets/images/categories/zajednica.webp";
 import { StaticImageData } from "next/image";
@@ -46,7 +46,6 @@ export const categoriesData: Record<
     description:
       "Simona će sa vama deliti svoja zapazanja i emocije sa treninga i trka, kao i deliti savete kako da trčanje uklopite u svakodnevne obaveze jednog tinejdžera.",
     image: simoninKutakImg,
-
     alt: "Simona na trkačkom treningu",
     excerpt: "Simonin kutak - svet trčanja kroz oči srednjoškolke",
   },

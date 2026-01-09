@@ -32,6 +32,28 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://trkackeprice.com",
   },
+  openGraph: {
+    title: "Trkačke priče",
+    description:
+      "Od prvih kilometara do ličnih pobeda, iskustva i priče iz sveta trkača.",
+    url: "https://trkackeprice.com",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Trkačke priče",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Trkačke priče",
+    description:
+      "Od prvih kilometara do ličnih pobeda, iskustva i priče iz sveta trkača.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
