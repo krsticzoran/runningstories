@@ -166,7 +166,7 @@
 
 .page-fade {
   opacity: 0;
-  animation: pageFadeIn 1s ease-out forwards;
+  animation: pageFadeIn 1300ms ease-out forwards;
 }
 
 @keyframes scroll {
