@@ -129,6 +129,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body,
   ul,
   li,
@@ -152,6 +153,20 @@
   h6 {
     @apply font-familjen;
   }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-fade {
+  opacity: 0;
+  animation: pageFadeIn 1s ease-out forwards;
 }
 
 @keyframes scroll {

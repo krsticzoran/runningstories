@@ -63,7 +63,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sr-Latn">
-      <head></head>
       <body
         className={`${inter.variable} ${familjenGrotesk.variable} ${instrumentSerif.variable} antialiased`}
       >
