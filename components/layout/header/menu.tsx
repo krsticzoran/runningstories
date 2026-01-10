@@ -37,7 +37,7 @@ export default function Menu() {
       </button>
       <SheetContent
         side="left"
-        className=" hidden md:block md:w-2/3 xl:w-3/4 [&>button]:hidden border-0!"
+        className=" hidden md:block md:w-2/3 xl:w-3/4 [&>button]:hidden border-0! bg-black"
       >
         <SheetTitle className="sr-only">running image</SheetTitle>
         <div className="relative h-screen w-full">
@@ -46,7 +46,7 @@ export default function Menu() {
             fill
             quality={60}
             alt="running women"
-            className="object-cover"
+            className="object-cover page-fade"
             priority
           />
           <div className="absolute left-4 top-7 z-50  ">
