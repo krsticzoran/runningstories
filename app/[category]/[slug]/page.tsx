@@ -30,9 +30,35 @@ export async function generateMetadata({ params }: PostPageProps) {
 
   if (!post) return {};
 
+  const url = `https://trkackeprice.com/${category}/${slug}`;
+
   return {
-    title: `Trkačke priče  - ${post.title}`,
+    title: `Trkačke priče – ${post.title}`,
     description: post.description,
+
+    alternates: {
+      canonical: url,
+    },
+
+    openGraph: {
+      type: "article",
+      url,
+      title: post.title,
+      description: post.description,
+      images: [
+        {
+          url: `https://trkackeprice.com${post.image}`,
+          alt: post.imageAlt,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [`https://trkackeprice.com${post.image}`],
+    },
   };
 }
 
