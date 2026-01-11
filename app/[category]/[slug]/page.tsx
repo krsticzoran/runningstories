@@ -72,51 +72,53 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="flex flex-col mx-auto justify-center bg-bg-secondary page-fade">
-      <header>
-        <Image
-          src={post.image}
-          alt={post.imageAlt}
-          sizes="100vw"
-          quality={75}
-          priority
-          className={`w-full h-[400px] xl:h-[450px] 2xl:h-[600px] object-cover ${
-            post.objectPosition === "top"
-              ? "object-top"
-              : post.objectPosition === "bottom"
-              ? "object-bottom"
-              : "object-center"
-          }`}
-        />
-        <Container className="pt-16 sm:pt-20 xl:pt-24">
-          <Link href={`/${post.category}`} className="inline-block">
-            <p className="text-sm !text-custom-accent font-semibold mb-2 uppercase">
-              {post.category.replace(/-/g, " ")}
-            </p>
-          </Link>
-          <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
-            <h1 className="text-black max-w-[1000px]">{post.title}</h1>
-            <div className="flex  xl:flex-col gap-5 xl:gap-2 xl:mb-2.5">
-              <p className="flex gap-2 leading-[22px] font-medium text-custom-dark">
-                <span className="font-semibold">
-                  {post.metadata.readingTime} min čitanja
-                </span>
+    <main className="flex flex-col mx-auto justify-center bg-bg-secondary page-fade">
+      <article>
+        <header>
+          <Image
+            src={post.image}
+            alt={post.imageAlt}
+            sizes="100vw"
+            quality={75}
+            priority
+            className={`w-full h-[400px] xl:h-[450px] 2xl:h-[600px] object-cover ${
+              post.objectPosition === "top"
+                ? "object-top"
+                : post.objectPosition === "bottom"
+                ? "object-bottom"
+                : "object-center"
+            }`}
+          />
+          <Container className="pt-16 sm:pt-20 xl:pt-24">
+            <Link href={`/${post.category}`} className="inline-block">
+              <p className="text-sm !text-custom-accent font-semibold mb-2 uppercase">
+                {post.category.replace(/-/g, " ")}
               </p>
-              <p className="leading-[22px] text-custom-dark opacity-80">
-                {formatDate(post.date)}
-              </p>
+            </Link>
+            <div className="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-3">
+              <h1 className="text-black max-w-[1000px]">{post.title}</h1>
+              <div className="flex  xl:flex-col gap-5 xl:gap-2 xl:mb-2.5">
+                <p className="flex gap-2 leading-[22px] font-medium text-custom-dark">
+                  <span className="font-semibold">
+                    {post.metadata.readingTime} min čitanja
+                  </span>
+                </p>
+                <p className="leading-[22px] text-custom-dark opacity-80">
+                  {formatDate(post.date)}
+                </p>
+              </div>
             </div>
-          </div>
+          </Container>
+        </header>
+
+        <Divider />
+
+        <Container>
+          <MDXContent code={post.content} components={mdxComponents} />
         </Container>
-      </header>
 
-      <Divider />
-
-      <Container>
-        <MDXContent code={post.content} components={mdxComponents} />
-      </Container>
-
-      <Divider className="mb-[100px] lg:mb-[120px]" />
-    </article>
+        <Divider className="mb-[100px] lg:mb-[120px]" />
+      </article>
+    </main>
   );
 }

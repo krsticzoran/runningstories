@@ -3,9 +3,9 @@ import HomeTraining from "@/components/home/HomeTraining";
 
 export default function Home() {
   return (
-    <div className="mt-20 page-fade">
+    <main className="mt-20 page-fade">
       <HomeHero />
       <HomeTraining />
-    </div>
+    </main>
   );
 }
