@@ -1,8 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
 import { posts } from "#site/content";
 import { Container } from "../layout/container";
 import runnersImage from "@/assets/images/home/runners.png";
+import HomeCard from "../cards/home-card";
 
 export default function HomeHero() {
   const featuredPosts = posts.filter((p) => p.featured).slice(0, 3);
@@ -33,22 +32,11 @@ export default function HomeHero() {
         <div className="pt-20 sm:pt-24">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {featuredPosts.map((post, index) => (
-              <Link
-                key={post.slug}
-                href={`/${post.category}/${post.slug}`}
-                className="relative  h-60 overflow-hidden p-1 bg-[#1b1b1b]"
-              >
-                <Image
-                  src={post.image}
-                  alt={post.imageAlt}
-                  fill
-                  priority={index === 0} //
-                  className="object-cover hover:scale-105 transition-all duration-300"
-                />
-                <div className="absolute bottom-0 left-0 right-0 px-2 py-1.5 text-white z-10 text-sm backdrop-blur-[20px] bg-black/25">
-                  {post.title}
-                </div>
-              </Link>
+              <HomeCard
+                post={post}
+                key={post.title}
+                priority={index === 0 ? true : undefined}
+              />
             ))}
           </div>
         </div>
