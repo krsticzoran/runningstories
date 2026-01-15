@@ -7,12 +7,16 @@ interface PostCardProps {
   post: Post;
   variant?: "featured" | "regular";
   titleAs?: "h2" | "h3" | "h4";
+  bgColor?: string;
+  readingTimeBgColor?: string;
 }
 
 export function CategoryCard({
   post,
   variant = "regular",
   titleAs = "h2",
+  bgColor = "bg-white",
+  readingTimeBgColor = "bg-[#efefef]",
 }: PostCardProps) {
   const isFeatured = variant === "featured";
   const TitleTag = titleAs;
@@ -20,7 +24,7 @@ export function CategoryCard({
   return (
     <Link
       href={`/${post.category}/${post.slug}`}
-      className={`bg-white p-1 flex flex-col ${
+      className={`${bgColor} p-1 flex flex-col ${
         isFeatured ? "xl:flex-row gap-6" : ""
       }`}
     >
@@ -43,7 +47,9 @@ export function CategoryCard({
           isFeatured ? "xl:w-1/2 xl:gap-8" : ""
         }`}
       >
-        <p className="w-fit inline-flex items-center gap-1 py-1.5 px-3 bg-[#efefef] text-custom-dark text-sm leading-5 font-semibold">
+        <p
+          className={`w-fit inline-flex items-center gap-1 py-1.5 px-3 ${readingTimeBgColor} text-custom-dark text-sm leading-5 font-semibold `}
+        >
           <Clock size={14} className="opacity-70" />
           {post.metadata.readingTime} min čitanja
         </p>
