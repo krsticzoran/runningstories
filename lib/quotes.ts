@@ -22,7 +22,6 @@ export const runningQuotes = [
 ];
 
 export function getRandomQuote() {
-  const length = runningQuotes.length;
-  const randomIndex = Math.floor(Math.random() * length);
-  return runningQuotes[randomIndex];
+  const minute = Math.floor(Date.now() / (1000 * 60));
+  return runningQuotes[minute % runningQuotes.length];
 }
