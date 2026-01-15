@@ -21,7 +21,7 @@ export default function HomeCard({ post, priority = false }: HomeCardProps) {
         priority={priority}
         className="object-cover hover:scale-105 transition-all duration-300"
       />
-      <div className="absolute bottom-0 left-0 right-0 px-2 py-1.5 text-white z-10 text-sm backdrop-blur-[20px] bg-black/25">
+      <div className="absolute bottom-0 left-0 right-0 px-2 py-1.5 text-white z-10 font-medium backdrop-blur-[20px] bg-black/25">
         {post.title}
       </div>
     </Link>
