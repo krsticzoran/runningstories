@@ -12,7 +12,7 @@ export default function HomeTraining() {
       <Container className="flex flex-col">
         <Link href="/oprema">
           <h2 className="text-[40px] sm:text-[48px] xl:text-[56px] leading-tight text-white pb-3 uppercase font-medium mb-4 xl:mb-6">
-            Oprema
+            Trkačka oprema
           </h2>
         </Link>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

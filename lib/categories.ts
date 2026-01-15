@@ -18,7 +18,7 @@ export const categoriesData: Record<
   }
 > = {
   trening: {
-    title: "Trening",
+    title: "Put do forme",
     description:
       "Nauči kako da trčiš brže i duže - kompletan sistem treninga sa detaljnim nedeljnim planovima, ubrzanjima, intervalnim treninzima i raznovrsnim vežbama za sve nivoe iskustva i trkačke ciljeve",
     image: treningImg,
@@ -26,7 +26,7 @@ export const categoriesData: Record<
     excerpt: "Trčiš bez plana? Nauči kako da trčiš duže i brže",
   },
   zdravlje: {
-    title: "Zdravlje & Ishrana",
+    title: "Oporavak & Ishrana",
     description:
       "Otkrij koje su najčešće povrede kod trkača, zašto nastaju i kako ih sprečiti - sa praktičnim savetima o ishrani i regeneraciji. Nauči kako da održiš telo zdravim i sprečiš povrede pre nego što se desе.",
     image: zdravljeImg,
@@ -34,7 +34,7 @@ export const categoriesData: Record<
     excerpt: "Zdravlje trkača - prevencija povreda, ishrana i regeneracija",
   },
   oprema: {
-    title: "Oprema",
+    title: "Trkačka oprema",
     description:
       "Pronađi pravu opremu za svoje trčanje - detaljni pregledi trkačkih patika, odeće, satova i gadžeta. Nauči kako da izabereš opremu koja će poboljšati tvoje performanse, pružiti komfor i zaštititi od povrede.",
     image: opremaImg,

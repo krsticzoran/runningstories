@@ -11,7 +11,7 @@ export default function HomeEquipment() {
       <Container className="flex flex-col">
         <Link href="/trening">
           <h2 className="text-[40px] sm:text-[48px] xl:text-[56px] leading-tight text-black pb-3 uppercase font-medium mb-4 xl:mb-6">
-            Trening
+            Put do forme
           </h2>
         </Link>
         <CategoryCard post={trainingPosts[0]} variant="featured" titleAs="h3" />
