@@ -20,8 +20,3 @@ export const runningQuotes = [
     author: "Amby Burfoot",
   },
 ];
-
-export function getRandomQuote() {
-  const minute = Math.floor(Date.now() / (1000 * 60));
-  return runningQuotes[minute % runningQuotes.length];
-}

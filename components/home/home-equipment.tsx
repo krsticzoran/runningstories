@@ -2,11 +2,9 @@ import { Container } from "../layout/container";
 import Link from "next/link";
 import HomeCard from "../cards/home-card";
 import { useCategoryPosts } from "@/hook/useCategoryPosts";
-import { getRandomQuote } from "@/lib/quotes";
 
 export default function HomeTraining() {
   const equimpmentPosts = useCategoryPosts("oprema");
-  const quote = getRandomQuote();
 
   return (
     <section className="bg-black py-[100px] xl:py-[120px]">
