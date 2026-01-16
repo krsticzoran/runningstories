@@ -41,14 +41,6 @@ export const categoriesData: Record<
     alt: "Trkačka oprema - patike, sat i odeća",
     excerpt: "Pronađi opremu koja pravi razliku - patike, satovi i odeća",
   },
-  "simonin-kutak": {
-    title: "Simonin kutak",
-    description:
-      "Simona će sa vama deliti svoja zapazanja i emocije sa treninga i trka, kao i deliti savete kako da trčanje uklopite u svakodnevne obaveze jednog tinejdžera.",
-    image: simoninKutakImg,
-    alt: "Simona na trkačkom treningu",
-    excerpt: "Simonin kutak - svet trčanja kroz oči srednjoškolke",
-  },
   zajednica: {
     title: "Zajednica",
     description:
@@ -56,6 +48,14 @@ export const categoriesData: Record<
     image: zajednicaImg,
     alt: "Grupa trkača u novogodišnjem izdanju",
     excerpt: "Priče običnih trkača koje inspirišu više nego medalje",
+  },
+  "simonin-kutak": {
+    title: "Simonin kutak",
+    description:
+      "Simona će sa vama deliti svoja zapazanja i emocije sa treninga i trka, kao i deliti savete kako da trčanje uklopite u svakodnevne obaveze jednog tinejdžera.",
+    image: simoninKutakImg,
+    alt: "Simona na trkačkom treningu",
+    excerpt: "Simonin kutak - svet trčanja kroz oči srednjoškolke",
   },
   "iz-sveta-trcanja": {
     title: "Iz sveta trčanja",
