@@ -4,7 +4,9 @@ import runnersImage from "@/assets/images/home/runners.png";
 import HomeCard from "../cards/home-card";
 
 export default function HomeHero() {
-  const featuredPosts = posts.filter((p) => p.featured).slice(0, 3);
+  const featuredPosts = posts
+    .filter((p) => p.featured)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <section className="bg-black text-white relative py-[100px] xl:py-[120px]">
