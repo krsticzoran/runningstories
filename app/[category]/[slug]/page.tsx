@@ -81,7 +81,7 @@ export default async function PostPage({ params }: PostPageProps) {
             sizes="100vw"
             quality={75}
             priority
-            className={`w-full h-[400px] xl:h-[450px] 2xl:h-[600px] object-cover ${
+            className={`w-full h-[400px] xl:h-[600px]  object-cover ${
               post.objectPosition === "top"
                 ? "object-top"
                 : post.objectPosition === "bottom"
