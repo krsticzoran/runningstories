@@ -9,7 +9,7 @@ export default function HomeHero() {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <section className="bg-black text-white relative py-[100px] xl:py-[120px]">
+    <section className="bg-black text-white relative py-[100px] xl:py-[120px] min-h-[calc(100vh-120px)] flex flex-col">
       <div
         className="hidden xl:block absolute top-0 right-0 h-full w-1/2"
         style={{
@@ -19,7 +19,7 @@ export default function HomeHero() {
           backgroundSize: "100% 80%",
         }}
       />
-      <Container>
+      <Container className="mt-auto">
         <div className="">
           <h1 className="-mt-2 max-w-xl xl:w-xl">
             Svaka trka ima svoju priču.

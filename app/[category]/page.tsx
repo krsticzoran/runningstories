@@ -64,7 +64,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <main className="bg-bg-secondary  pb-[100px] xl:pb-[120px] page-fade">
-      <div className="relative w-full h-[400px] xl:h-[600px] ">
+      <div className="relative w-full h-[400px] xl:h-[600px] 2xl:h-[750px] ">
         <Image
           src={categoryMeta.image}
           alt={categoryMeta.alt}
