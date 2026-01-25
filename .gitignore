@@ -17,6 +17,13 @@
 /.next/
 /out/
 
+# velite
+/.velite/
+
+# IDE
+.vscode/
+
+
 # production
 /build
 
