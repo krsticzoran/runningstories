@@ -18,7 +18,7 @@ export default function HomeWorld() {
         }}
       />
       <Container className="relative flex flex-col z-50">
-        <Link href="/zdravlje">
+        <Link href="/iz-sveta-trcanja">
           <h2 className="text-[40px] sm:text-[48px] xl:text-[56px] leading-tight text-black pb-3 uppercase font-medium mb-4 xl:mb-6">
             Iz sveta trčanja
           </h2>
