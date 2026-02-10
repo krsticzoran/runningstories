@@ -2,6 +2,7 @@ import { Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Post } from "@/type/post";
+import { formatDate } from "@/lib/date";
 
 interface PostCardProps {
   post: Post;
@@ -47,12 +48,17 @@ export function CategoryCard({
           isFeatured ? "xl:w-1/2 xl:gap-8" : ""
         }`}
       >
-        <p
-          className={`w-fit inline-flex items-center gap-1 py-1.5 px-3 ${readingTimeBgColor} text-custom-dark text-sm leading-5 font-semibold `}
-        >
-          <Clock size={14} className="opacity-70" />
-          {post.metadata.readingTime} min čitanja
-        </p>
+        <div className="flex justify-between text-custom-dark text-sm leading-5 font-semibold">
+          <p
+            className={`w-fit inline-flex items-center gap-1 py-1.5 px-3 ${readingTimeBgColor}  `}
+          >
+            <Clock size={14} className="opacity-70" />
+            {post.metadata.readingTime} min čitanja
+          </p>
+          <p className={`w-fit inline-flex items-center gap-1 py-1.5 px-3  `}>
+            {formatDate(post.date)}
+          </p>
+        </div>
         <TitleTag
           className={`text-xl sm:text-[22px] xl:text-[26px] font-medium text-black`}
         >
