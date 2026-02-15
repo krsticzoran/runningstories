@@ -4,7 +4,7 @@ import { runningQuotes } from "@/lib/quotes";
 
 export default function Quote() {
   const [index, setIndex] = useState(0);
-  const [opacity, setOpacity] = useState(0);
+  const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
