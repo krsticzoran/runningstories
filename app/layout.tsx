@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Familjen_Grotesk, Instrument_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./globals.css";
 import Header from "@/components/layout/header/header";
@@ -68,6 +69,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
