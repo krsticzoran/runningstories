@@ -1,6 +1,6 @@
 import { CategoryCard } from "@/components/cards/categroy-card";
 import { Container } from "../layout/container";
-import Link from "next/link";
+import { SectionHeader } from "../ui/section-header";
 import { useCategoryPosts } from "@/hook/useCategoryPosts";
 
 export default function HomeEquipment() {
@@ -9,11 +9,7 @@ export default function HomeEquipment() {
   return (
     <section className="bg-bg-secondary py-[100px] xl:py-[120px]">
       <Container className="flex flex-col">
-        <Link href="/trening">
-          <h2 className="text-[40px] sm:text-[48px] xl:text-[56px] leading-tight text-black pb-3 uppercase font-medium mb-4 xl:mb-6">
-            Put do forme
-          </h2>
-        </Link>
+        <SectionHeader slug="trening" />
         <CategoryCard post={trainingPosts[0]} variant="featured" titleAs="h3" />
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 mt-3">
           {trainingPosts.slice(1).map((post) => (

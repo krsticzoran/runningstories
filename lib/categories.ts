@@ -15,6 +15,7 @@ export const categoriesData: Record<
     alt: string;
     objectPosition?: "center" | "top" | "bottom";
     excerpt: string;
+    ctaText: string;
   }
 > = {
   trening: {
@@ -24,6 +25,7 @@ export const categoriesData: Record<
     image: treningImg,
     alt: "mnoštvo trkača na Berlin maratonu",
     excerpt: "Trčiš bez plana? Nauči kako da trčiš duže i brže",
+    ctaText: "Istraži treninge",
   },
   zdravlje: {
     title: "Oporavak & Ishrana",
@@ -32,6 +34,7 @@ export const categoriesData: Record<
     image: zdravljeImg,
     alt: "Zena se isteže nako trčanja kako bi održala elastičnost i sprečila povrede",
     excerpt: "Zdravlje trkača - prevencija povreda, ishrana i regeneracija",
+    ctaText: "Nauči o regeneraciji",
   },
   oprema: {
     title: "Trkačka oprema",
@@ -40,6 +43,7 @@ export const categoriesData: Record<
     image: opremaImg,
     alt: "Trkačka oprema - patike, sat i odeća",
     excerpt: "Pronađi opremu koja pravi razliku - patike, satovi i odeća",
+    ctaText: "Istraži opremu",
   },
   zajednica: {
     title: "Zajednica",
@@ -48,6 +52,7 @@ export const categoriesData: Record<
     image: zajednicaImg,
     alt: "Grupa trkača u novogodišnjem izdanju",
     excerpt: "Priče običnih trkača koje inspirišu više nego medalje",
+    ctaText: "Čitaj priče",
   },
   "simonin-kutak": {
     title: "Simonin kutak",
@@ -56,6 +61,7 @@ export const categoriesData: Record<
     image: simoninKutakImg,
     alt: "Simona na trkačkom treningu",
     excerpt: "Simonin kutak - svet trčanja kroz oči srednjoškolke",
+    ctaText: "Otkrij moj svet",
   },
   "iz-sveta-trcanja": {
     title: "Iz sveta trčanja",
@@ -64,5 +70,6 @@ export const categoriesData: Record<
     image: izSvetaTrcanjaImg,
     alt: "Start velike međunarodne trke sa elitnim i rekreativnim trkačima",
     excerpt: "Globalne vesti, priče i trendovi iz sveta trčanja",
+    ctaText: "Prati svet trčanja",
   },
 };
