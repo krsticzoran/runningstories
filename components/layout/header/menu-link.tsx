@@ -4,19 +4,15 @@ interface MenuLinkProps {
   href: string;
   label: string;
 
-  setIsMenuOpen: (open: boolean) => void;
+  onClose: () => void;
 }
 
-export default function MenuLink({
-  href,
-  label,
-  setIsMenuOpen,
-}: MenuLinkProps) {
+export default function MenuLink({ href, label, onClose }: MenuLinkProps) {
   return (
     <Link
       key={href}
       href={href}
-      onClick={() => setIsMenuOpen(false)}
+      onClick={onClose}
       className="group relative overflow-hidden font-familjen text-[22px] leading-[22px] font-medium h-[22px] block"
     >
       {/* default text */}

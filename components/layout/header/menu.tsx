@@ -1,20 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { socials } from "@/lib/socials";
-
 import Image from "next/image";
 
-import { getMenuLinks } from "@/lib/menu";
-
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
-import MenuLink from "./menu-link";
+
 import headerImage from "@/assets/images/header/header-image.webp";
+import { MenuContent, MenuSocials } from "./menu-content";
 
 export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const menuLinks = getMenuLinks();
+  const handleCloseMenu = () => setIsMenuOpen(false);
 
   return (
     <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
@@ -89,37 +85,8 @@ export default function Menu() {
             </div>
           </button>
         </div>
-        <nav className="flex h-full flex-col mt-[66px] gap-4">
-          <MenuLink href="/" label="Početna" setIsMenuOpen={setIsMenuOpen} />
-
-          {menuLinks
-            .filter((link) => link.visible !== false)
-            .map((item) => (
-              <MenuLink
-                href={item.href}
-                label={item.label}
-                setIsMenuOpen={setIsMenuOpen}
-                key={item.href}
-              />
-            ))}
-        </nav>
-        <div className="flex gap-4">
-          {socials.map((s) => {
-            const Icon = s.icon;
-            return (
-              <a
-                key={s.href}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                className="text-white opacity-75 hover:opacity-100 transition"
-              >
-                <Icon className="w-5 h-5" />
-              </a>
-            );
-          })}
-        </div>
+        <MenuContent onClose={handleCloseMenu} />
+        <MenuSocials />
       </SheetContent>
     </Sheet>
   );
