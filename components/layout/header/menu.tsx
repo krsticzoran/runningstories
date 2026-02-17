@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SiInstagram, SiYoutube, SiTiktok, SiFacebook } from "react-icons/si";
+import { socials } from "@/lib/socials";
 
 import Image from "next/image";
 
@@ -92,48 +92,33 @@ export default function Menu() {
         <nav className="flex h-full flex-col mt-[66px] gap-4">
           <MenuLink href="/" label="Početna" setIsMenuOpen={setIsMenuOpen} />
 
-          {menuLinks.map((item) => (
-            <MenuLink
-              href={item.href}
-              label={item.label}
-              setIsMenuOpen={setIsMenuOpen}
-              key={item.href}
-            />
-          ))}
+          {menuLinks
+            .filter((link) => link.visible !== false)
+            .map((item) => (
+              <MenuLink
+                href={item.href}
+                label={item.label}
+                setIsMenuOpen={setIsMenuOpen}
+                key={item.href}
+              />
+            ))}
         </nav>
         <div className="flex gap-4">
-          <a
-            href="https://www.youtube.com/@trkacke_price"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-          >
-            <SiYoutube className="w-5 h-5 text-white opacity-75 hover:opacity-100 transition" />
-          </a>
-          <a
-            href="https://www.instagram.com/trkacke.price/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <SiInstagram className="w-5 h-5 text-white opacity-75 hover:opacity-100 transition" />
-          </a>
-          <a
-            href="https://www.tiktok.com/@trkacke_price"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="TikTok"
-          >
-            <SiTiktok className="w-5 h-5 text-white opacity-75 hover:opacity-100 transition" />
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61588449144282"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-          >
-            <SiFacebook className="w-5 h-5 text-white opacity-75 hover:opacity-100 transition" />
-          </a>
+          {socials.map((s) => {
+            const Icon = s.icon;
+            return (
+              <a
+                key={s.href}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="text-white opacity-75 hover:opacity-100 transition"
+              >
+                <Icon className="w-5 h-5" />
+              </a>
+            );
+          })}
         </div>
       </SheetContent>
     </Sheet>

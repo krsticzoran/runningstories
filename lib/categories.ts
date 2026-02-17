@@ -16,6 +16,7 @@ export const categoriesData: Record<
     objectPosition?: "center" | "top" | "bottom";
     excerpt: string;
     ctaText: string;
+    visible?: boolean;
   }
 > = {
   trening: {
@@ -62,6 +63,7 @@ export const categoriesData: Record<
     alt: "Simona na trkačkom treningu",
     excerpt: "Simonin kutak - svet trčanja kroz oči srednjoškolke",
     ctaText: "Otkrij moj svet",
+    visible: false,
   },
   "iz-sveta-trcanja": {
     title: "Iz sveta trčanja",
