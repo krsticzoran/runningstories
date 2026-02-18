@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 
-import headerImage from "@/assets/images/header/header-image.webp";
-import { MenuContent, MenuSocials } from "./menu-content";
+import { MenuNavigation } from "./menu-navigation";
+import { SocialsIcons } from "@/components/ui/social-icons";
+import { MenuVisual } from "./menu-visual";
 
 export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,37 +36,7 @@ export default function Menu() {
         className=" hidden md:block md:w-2/3 xl:w-3/4 [&>button]:hidden border-0! bg-black"
       >
         <SheetTitle className="sr-only">running image</SheetTitle>
-        <div className="relative h-screen w-full">
-          <Image
-            src={headerImage}
-            fill
-            quality={60}
-            alt="running women"
-            className="object-cover page-fade"
-            priority
-          />
-          <div className="absolute left-4 top-7 z-50  ">
-            <div className="flex gap-2">
-              <span className="text-white font-familjen font-bold text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
-                Trkačke
-              </span>
-              <span className="text-custom-accent font-familjen font-bold text-[33px] md:text-[38px] lg:text-[42px] tracking-tighter leading-none">
-                Priče
-              </span>
-            </div>
-            <p className="text-white font-medium text-lg  mt-2 ">
-              Priče, saveti i inspiracija za trkače.
-            </p>
-          </div>
-
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 35%)",
-            }}
-          />
-        </div>
+        <MenuVisual />
       </SheetContent>
       <SheetContent
         side="right"
@@ -85,8 +55,8 @@ export default function Menu() {
             </div>
           </button>
         </div>
-        <MenuContent onClose={handleCloseMenu} />
-        <MenuSocials />
+        <MenuNavigation onClose={handleCloseMenu} />
+        <SocialsIcons />
       </SheetContent>
     </Sheet>
   );

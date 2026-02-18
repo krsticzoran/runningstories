@@ -1,4 +1,9 @@
 import Link from "next/link";
+import { getMenuLinks } from "@/lib/menu";
+
+interface MenuContentProps {
+  onClose: () => void;
+}
 
 interface MenuLinkProps {
   href: string;
@@ -7,7 +12,28 @@ interface MenuLinkProps {
   onClose: () => void;
 }
 
-export default function MenuLink({ href, label, onClose }: MenuLinkProps) {
+export function MenuNavigation({ onClose }: MenuContentProps) {
+  const menuLinks = getMenuLinks();
+
+  return (
+    <nav className="flex h-full flex-col mt-[66px] gap-4 w-full">
+      <MenuLink href="/" label="Početna" onClose={onClose} />
+
+      {menuLinks
+        .filter((link) => link.visible !== false)
+        .map((item) => (
+          <MenuLink
+            href={item.href}
+            label={item.label}
+            onClose={onClose}
+            key={item.href}
+          />
+        ))}
+    </nav>
+  );
+}
+
+function MenuLink({ href, label, onClose }: MenuLinkProps) {
   return (
     <Link
       key={href}
