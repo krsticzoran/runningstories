@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Container } from "../container";
+import { MenuVisual } from "./menu-visual";
 
 import Menu from "./menu";
 
@@ -18,7 +19,9 @@ export default function Header() {
                 Priče
               </span>
             </Link>
-            <Menu />
+            <Menu>
+              <MenuVisual />
+            </Menu>
           </div>
         </Container>
       </div>

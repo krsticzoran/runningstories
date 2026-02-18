@@ -14,7 +14,6 @@ interface MenuLinkProps {
 
 export function MenuNavigation({ onClose }: MenuContentProps) {
   const menuLinks = getMenuLinks();
-
   return (
     <nav className="flex h-full flex-col mt-[66px] gap-4 w-full">
       <MenuLink href="/" label="Početna" onClose={onClose} />

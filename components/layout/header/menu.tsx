@@ -6,9 +6,8 @@ import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 
 import { MenuNavigation } from "./menu-navigation";
 import { SocialsIcons } from "@/components/ui/social-icons";
-import { MenuVisual } from "./menu-visual";
 
-export default function Menu() {
+export default function Menu({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleCloseMenu = () => setIsMenuOpen(false);
 
@@ -36,7 +35,7 @@ export default function Menu() {
         className=" hidden md:block md:w-2/3 xl:w-3/4 [&>button]:hidden border-0! bg-black"
       >
         <SheetTitle className="sr-only">running image</SheetTitle>
-        <MenuVisual />
+        {children}
       </SheetContent>
       <SheetContent
         side="right"
