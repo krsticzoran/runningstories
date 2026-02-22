@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { categoriesData } from "@/lib/categories";
 import { CategoryCard } from "@/components/cards/categroy-card";
 import { Container } from "@/components/layout/container";
+import { PaginationNav } from "@/components/ui/pagination-nav";
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
@@ -94,6 +95,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             <CategoryCard post={post} key={post.slug} />
           ))}
         </div>
+        <PaginationNav category={category} currentPage={1} totalPages={3} />
       </Container>
     </main>
   );
