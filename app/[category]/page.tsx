@@ -63,6 +63,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
+  const POSTS_PER_PAGE = 7;
+
+  const totalPages = Math.ceil(categoryPosts.length / POSTS_PER_PAGE);
+
   return (
     <main className="bg-bg-secondary  pb-[100px] xl:pb-[120px] page-fade">
       <div className="relative w-full h-[400px] xl:h-[calc(100vh-330px)] ">
@@ -91,11 +95,15 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <Container className="flex flex-col gap-3">
         <CategoryCard post={categoryPosts[0]} variant="featured" />
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
-          {categoryPosts.slice(1).map((post) => (
+          {categoryPosts.slice(1, POSTS_PER_PAGE).map((post) => (
             <CategoryCard post={post} key={post.slug} />
           ))}
         </div>
-        <PaginationNav category={category} currentPage={1} totalPages={3} />
+        <PaginationNav
+          category={category}
+          currentPage={1}
+          totalPages={totalPages}
+        />
       </Container>
     </main>
   );
