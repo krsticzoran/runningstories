@@ -20,11 +20,65 @@ export function PaginationNav({
 
   const nextHref = `/${category}/page/${currentPage + 1}`;
 
-  return (
-    <div className="flex gap-4 mt-10">
-      {currentPage > 1 && <Link href={prevHref}>← Previous</Link>}
+  let startPage = Math.max(currentPage - 1, 1);
+  const endPage = Math.min(startPage + 2, totalPages);
 
-      {currentPage < totalPages && <Link href={nextHref}>Next →</Link>}
+  startPage = Math.max(endPage - 2, 1);
+
+  const pages = [];
+  for (let i = startPage; i <= endPage; i++) {
+    pages.push(i);
+  }
+
+  return (
+    <div className="flex items-center justify-center gap-2 mt-10">
+      {currentPage > 1 && (
+        <Link
+          href={`/${category}`}
+          className="w-8 h-8 flex items-center justify-center bg-white text-black"
+        >
+          &laquo;
+        </Link>
+      )}
+
+      {currentPage > 1 && (
+        <Link
+          href={prevHref}
+          className="w-8 h-8 flex items-center justify-center bg-white text-black"
+        >
+          &lt;
+        </Link>
+      )}
+
+      {pages.map((page) => (
+        <Link
+          key={page}
+          href={page === 1 ? `/${category}` : `/${category}/page/${page}`}
+          className={`w-8 h-8 flex items-center justify-center rounded font-semibold ${
+            page === currentPage ? "bg-black text-white" : "bg-white text-black"
+          }`}
+        >
+          {page}
+        </Link>
+      ))}
+
+      {currentPage < totalPages && (
+        <Link
+          href={nextHref}
+          className="w-8 h-8 flex items-center justify-center bg-white text-black"
+        >
+          &gt;
+        </Link>
+      )}
+
+      {currentPage < totalPages && (
+        <Link
+          href={`/${category}/page/${totalPages}`}
+          className="w-8 h-8 flex items-center justify-center bg-white text-black"
+        >
+          &raquo;
+        </Link>
+      )}
     </div>
   );
 }
