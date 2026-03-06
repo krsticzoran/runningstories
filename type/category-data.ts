@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { Tag } from "@/lib/tags";
 
 export type CategoryData = {
   title: string;
@@ -9,4 +10,5 @@ export type CategoryData = {
   excerpt: string;
   ctaText: string;
   visible?: boolean;
+  tags: Tag[];
 };

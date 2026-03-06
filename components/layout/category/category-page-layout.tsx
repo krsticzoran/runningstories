@@ -4,6 +4,7 @@ import { CategoryCard } from "@/components/cards/categroy-card";
 import { PaginationNav } from "@/components/ui/pagination-nav";
 import { Post } from "@/type/post";
 import { CategoryData } from "@/type/category-data";
+import { CategoryFilter } from "@/components/category/category-filter";
 
 interface CategoryPageLayoutProps {
   categoryMeta: CategoryData;
@@ -46,6 +47,7 @@ export function CategoryPageLayout({
         <h1 className="text-black max-w-[1000px] capitalize mb-10 xl:mb-14">
           {categoryMeta.excerpt}
         </h1>
+        <CategoryFilter tags={categoryMeta.tags} />
       </Container>
 
       <Container className="flex flex-col gap-3">

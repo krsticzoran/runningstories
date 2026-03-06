@@ -5,6 +5,7 @@ import simoninKutakImg from "@/assets/images/categories/simona.webp";
 import izSvetaTrcanjaImg from "@/assets/images/categories/iz-sveta-trcanja.webp";
 import zajednicaImg from "@/assets/images/categories/zajednica.webp";
 import { StaticImageData } from "next/image";
+import { Tag } from "@/lib/tags";
 
 export const categoriesData: Record<
   string,
@@ -17,6 +18,7 @@ export const categoriesData: Record<
     excerpt: string;
     ctaText: string;
     visible?: boolean;
+    tags: Tag[];
   }
 > = {
   trening: {
@@ -27,6 +29,7 @@ export const categoriesData: Record<
     alt: "mnoštvo trkača na Berlin maratonu",
     excerpt: "Trčiš bez plana? Nauči kako da trčiš duže i brže",
     ctaText: "Istraži treninge",
+    tags: ["pocetnici", "napredni", "40plus", "5k", "10k", "21k", "maraton"],
   },
   zdravlje: {
     title: "Oporavak & Ishrana",
@@ -36,6 +39,7 @@ export const categoriesData: Record<
     alt: "Zena se isteže nako trčanja kako bi održala elastičnost i sprečila povrede",
     excerpt: "Zdravlje trkača - prevencija povreda, ishrana i regeneracija",
     ctaText: "Nauči o regeneraciji",
+    tags: [],
   },
   oprema: {
     title: "Trkačka oprema",
@@ -45,6 +49,7 @@ export const categoriesData: Record<
     alt: "Trkačka oprema - patike, sat i odeća",
     excerpt: "Pronađi opremu koja pravi razliku - patike, satovi i odeća",
     ctaText: "Istraži opremu",
+    tags: [],
   },
   zajednica: {
     title: "Zajednica",
@@ -54,6 +59,7 @@ export const categoriesData: Record<
     alt: "Grupa trkača u novogodišnjem izdanju",
     excerpt: "Priče običnih trkača koje inspirišu više nego medalje",
     ctaText: "Čitaj priče",
+    tags: [],
   },
   "simonin-kutak": {
     title: "Simonin kutak",
@@ -64,6 +70,7 @@ export const categoriesData: Record<
     excerpt: "Simonin kutak - svet trčanja kroz oči srednjoškolke",
     ctaText: "Otkrij moj svet",
     visible: false,
+    tags: [],
   },
   "iz-sveta-trcanja": {
     title: "Iz sveta trčanja",
@@ -73,5 +80,6 @@ export const categoriesData: Record<
     alt: "Start velike međunarodne trke sa elitnim i rekreativnim trkačima",
     excerpt: "Globalne vesti, priče i trendovi iz sveta trčanja",
     ctaText: "Prati svet trčanja",
+    tags: [],
   },
 };
