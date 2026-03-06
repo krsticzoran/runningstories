@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { Tag } from "@/lib/tags";
 
 export type Post = {
   title: string;
@@ -11,4 +12,5 @@ export type Post = {
   metadata: Record<string, any>;
   content: string;
   permalink: string;
+  tags?: Tag[];
 };

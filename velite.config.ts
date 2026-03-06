@@ -31,6 +31,19 @@ export default defineConfig({
           image: s.image(),
           imageAlt: s.string().max(200),
           metadata: s.metadata(),
+          tags: s
+            .array(
+              s.enum([
+                "pocetnici",
+                "napredni",
+                "40plus",
+                "5k",
+                "10k",
+                "21k",
+                "maraton",
+              ])
+            )
+            .optional(),
           content: s.mdx(),
           objectPosition: s.enum(["top", "center", "bottom"]).optional(),
         })
