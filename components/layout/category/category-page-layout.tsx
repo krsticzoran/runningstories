@@ -13,6 +13,7 @@ interface CategoryPageLayoutProps {
   category: string;
   currentPage: number;
   totalPages: number;
+  categoryPosts: Post[];
 }
 
 export function CategoryPageLayout({
@@ -22,6 +23,7 @@ export function CategoryPageLayout({
   category,
   currentPage,
   totalPages,
+  categoryPosts,
 }: CategoryPageLayoutProps) {
   return (
     <main className="bg-bg-secondary pb-[100px] xl:pb-[120px] page-fade">
@@ -47,7 +49,10 @@ export function CategoryPageLayout({
         <h1 className="text-black max-w-[1000px] capitalize mb-10 xl:mb-14">
           {categoryMeta.excerpt}
         </h1>
-        <CategoryFilter tags={categoryMeta.tags} />
+        <CategoryFilter
+          tags={categoryMeta.tags}
+          categoryPosts={categoryPosts}
+        />
       </Container>
 
       <Container className="flex flex-col gap-3">

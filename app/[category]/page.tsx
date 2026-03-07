@@ -77,6 +77,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       category={category}
       currentPage={1}
       totalPages={totalPages}
+      categoryPosts={categoryPosts}
     />
   );
 }

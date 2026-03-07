@@ -1,15 +1,29 @@
 "use client";
 import { Tag, TAGS } from "@/lib/tags";
 import { useQueryState } from "nuqs";
+import { Post } from "@/type/post";
 
 interface CategoryFilterProps {
   tags: Tag[];
+  categoryPosts: Post[];
 }
 
-export function CategoryFilter({ tags }: CategoryFilterProps) {
-  const [tag, setTag] = useQueryState("tag");
+export function CategoryFilter({ tags, categoryPosts }: CategoryFilterProps) {
+  const validTags = Object.keys(TAGS) as Tag[];
+
+  const [tag, setTag] = useQueryState<Tag | null>("tag", {
+    defaultValue: null,
+    parse: (value) =>
+      validTags.includes(value as Tag) ? (value as Tag) : null,
+  });
 
   if (!tags || tags.length === 0) return null;
+
+  const filteredPosts = categoryPosts
+    .filter((post) => !tag || post.tags?.includes(tag))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  console.log("Filtered posts:", filteredPosts);
 
   return (
     <div className="flex flex-wrap gap-2">
