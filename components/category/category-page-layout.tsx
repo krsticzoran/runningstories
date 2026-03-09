@@ -4,6 +4,7 @@ import { Post } from "@/type/post";
 import { CategoryData } from "@/type/category-data";
 import { CategoryFilter } from "@/components/category/category-filter";
 import { CategoryPostsGrid } from "@/components/category/category-posts-grid";
+import { Suspense } from "react";
 
 interface CategoryPageLayoutProps {
   categoryMeta: CategoryData;
@@ -48,16 +49,20 @@ export async function CategoryPageLayout({
         <h1 className="text-black max-w-[1000px] capitalize mb-10 xl:mb-14">
           {categoryMeta.excerpt}
         </h1>
-
-        <CategoryFilter tags={categoryMeta.tags} categoryPosts={categoryPosts}>
-          <CategoryPostsGrid
-            featuredPost={featuredPost}
-            gridPosts={gridPosts}
-            category={category}
-            currentPage={currentPage}
-            totalPages={totalPages}
-          />
-        </CategoryFilter>
+        <Suspense fallback={null}>
+          <CategoryFilter
+            tags={categoryMeta.tags}
+            categoryPosts={categoryPosts}
+          >
+            <CategoryPostsGrid
+              featuredPost={featuredPost}
+              gridPosts={gridPosts}
+              category={category}
+              currentPage={currentPage}
+              totalPages={totalPages}
+            />
+          </CategoryFilter>
+        </Suspense>
       </Container>
     </main>
   );
