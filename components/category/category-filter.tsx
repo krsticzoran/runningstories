@@ -26,17 +26,15 @@ export function CategoryFilter({
 
   if (!tags || tags.length === 0) return children;
 
-  const filteredPosts = categoryPosts
-    .filter((post) => !tag || post.tags?.includes(tag))
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const filteredPosts = tag
+    ? categoryPosts
+        .filter((post) => post.tags?.includes(tag))
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    : [];
 
   return (
     <>
-      <div
-        className={`flex flex-wrap gap-2 ${
-          filteredPosts.length > 0 ? "mb-5" : ""
-        }`}
-      >
+      <div className="flex flex-wrap gap-2">
         <button
           onClick={() => setTag(null)}
           className="px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-200 transition"
@@ -54,7 +52,7 @@ export function CategoryFilter({
         ))}
       </div>
       {tag ? (
-        <Container className="flex flex-col gap-3">
+        <Container className="flex flex-col gap-3 mt-5">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
             {filteredPosts.map((post) => (
               <CategoryCard post={post} key={post.slug} />
