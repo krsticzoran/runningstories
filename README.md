@@ -9,9 +9,10 @@
 ## Technologies
 
 - **Next.js** with **TypeScript**
+- **Velite** for MDX content management
+- **Supabase** for backend and database
+- **Nuqs** for URL query state management
 - **Tailwind CSS** for styling
 - **Framer Motion** for animations
 - **ShadCN** UI components
-- **Velite** for MDX content management
-- **Supabase** for backend and database
 - **Vercel** for hosting
