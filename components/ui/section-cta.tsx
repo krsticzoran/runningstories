@@ -5,17 +5,19 @@ interface SectionCTAProps {
   href: string;
   text: string;
   btnColor?: string;
+  btnBorderColor?: string;
 }
 
 export function SectionCTA({
   href,
   text,
   btnColor = "white",
+  btnBorderColor = "border-black",
 }: SectionCTAProps) {
   return (
     <Link
       href={href}
-      className={`relative inline-flex items-center h-fit gap-2 pr-3 border-2 border-white ${
+      className={`relative inline-flex items-center h-fit gap-2 pr-3 border-2 ${btnBorderColor} ${
         btnColor === "secondary" ? "bg-bg-secondary" : "bg-white"
       }
                   text-black 

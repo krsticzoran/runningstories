@@ -11,7 +11,11 @@ export default function HomeTraining() {
   return (
     <section className="bg-black py-[100px] xl:py-[120px]">
       <Container className="flex flex-col">
-        <SectionHeader slug="oprema" bgColor="black" />
+        <SectionHeader
+          slug="oprema"
+          bgColor="black"
+          btnBorderColor="border-white"
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {equimpmentPosts.map((post) => (
             <HomeCard key={post.title} post={post} />

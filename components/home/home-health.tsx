@@ -10,7 +10,7 @@ export default function HomeHealth() {
   return (
     <section className="bg-white py-[100px] xl:py-[120px]">
       <Container className="flex flex-col">
-        <SectionHeader slug="zdravlje" btnColor="secondary" />
+        <SectionHeader slug="zdravlje" />
 
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 mt-3">
           {trainingPosts.map((post) => (

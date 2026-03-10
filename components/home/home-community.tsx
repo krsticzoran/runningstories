@@ -1,6 +1,5 @@
 import { CategoryCard } from "@/components/cards/categroy-card";
 import { Container } from "../layout/container";
-import Link from "next/link";
 import { useCategoryPosts } from "@/hook/useCategoryPosts";
 import { SectionHeader } from "../ui/section-header";
 

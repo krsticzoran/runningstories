@@ -2,7 +2,6 @@
 import { Tag, TAGS } from "@/lib/tags";
 import { useQueryState } from "nuqs";
 import { Post } from "@/type/post";
-import { Container } from "@/components/layout/container";
 import { CategoryCard } from "@/components/cards/categroy-card";
 import { CategoryPostsGrid } from "./category-posts-grid";
 

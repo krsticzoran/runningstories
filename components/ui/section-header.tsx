@@ -6,12 +6,14 @@ interface SectionHeaderProps {
   slug: string;
   bgColor?: string;
   btnColor?: string;
+  btnBorderColor?: string;
 }
 
 export function SectionHeader({
   slug,
   bgColor = "white",
   btnColor,
+  btnBorderColor,
 }: SectionHeaderProps) {
   const category = categoriesData[slug];
 
@@ -30,6 +32,7 @@ export function SectionHeader({
         href={`/${slug}`}
         text={category.ctaText}
         btnColor={btnColor}
+        btnBorderColor={btnBorderColor}
       />
     </div>
   );

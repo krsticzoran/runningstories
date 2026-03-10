@@ -1,4 +1,3 @@
-import { Container } from "@/components/layout/container";
 import { CategoryCard } from "@/components/cards/categroy-card";
 import { PaginationNav } from "@/components/ui/pagination-nav";
 import { Post } from "@/type/post";
