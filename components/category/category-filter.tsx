@@ -54,14 +54,18 @@ export function CategoryFilter({
       <div className="flex flex-wrap gap-2">
         <button
           onClick={() => setTag(null)}
-          className="px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-200 transition"
+          className={`px-3 py-1 cursor-pointer rounded font-semibold ${
+            tag === null ? "text-white bg-black" : "text-black bg-white"
+          }`}
         >
           Svi članci
         </button>
         {tags.map((tagValue) => (
           <button
             key={tagValue}
-            className="px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-200 transition"
+            className={`px-3 h-8 cursor-pointer rounded font-semibold ${
+              tag === tagValue ? "text-white bg-black" : "text-black bg-white"
+            }`}
             onClick={() => setTag(tagValue)}
           >
             {TAGS[tagValue]}
