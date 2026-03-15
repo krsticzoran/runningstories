@@ -8,6 +8,7 @@ import { getPost } from "@/lib/content";
 import { formatDate } from "@/lib/date";
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
+import HomeCard from "@/components/cards/home-card";
 
 interface PostPageProps {
   params: Promise<{
@@ -76,6 +77,8 @@ export default async function PostPage({ params }: PostPageProps) {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
 
+  const showRelated = categoryPosts.length === 3;
+
   return (
     <main className="flex flex-col mx-auto justify-center bg-bg-secondary page-fade">
       <article>
@@ -122,7 +125,20 @@ export default async function PostPage({ params }: PostPageProps) {
           <MDXContent code={post.content} components={mdxComponents} />
         </Container>
 
-        <Divider className="mb-[100px] lg:mb-[120px]" />
+        <Divider />
+
+        {showRelated && (
+          <Container>
+            <h3 className="text-black text-[36px] leading-9 sm:text-[44px] sm:leading-11 lg:text-[52px] lg:leading-[52px] tracking-tight font-bold font-familjen mt-10 mb-8 first:-mt-3">
+              Srodni članci
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-[60px]">
+              {categoryPosts.map((post, index) => (
+                <HomeCard post={post} key={index} />
+              ))}
+            </div>
+          </Container>
+        )}
       </article>
     </main>
   );
