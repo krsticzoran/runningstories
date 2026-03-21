@@ -14,6 +14,7 @@ interface CategoryPageLayoutProps {
   currentPage: number;
   totalPages: number;
   categoryPosts: Post[];
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 export async function CategoryPageLayout({
@@ -24,6 +25,7 @@ export async function CategoryPageLayout({
   currentPage,
   totalPages,
   categoryPosts,
+  searchParams,
 }: CategoryPageLayoutProps) {
   return (
     <main className="bg-bg-secondary pb-[100px] xl:pb-[120px] page-fade">
@@ -68,6 +70,7 @@ export async function CategoryPageLayout({
             category={category}
             currentPage={currentPage}
             totalPages={totalPages}
+            searchParams={searchParams}
           />
         </Suspense>
       </Container>

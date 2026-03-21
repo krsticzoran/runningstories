@@ -24,7 +24,7 @@ export default defineConfig({
           image: s.image(),
           imageAlt: s.string().max(200),
           metadata: s.metadata(),
-          tags: s.array(s.string()).optional(),
+          tags: s.array(s.enum(["restday", "dailylog"])).optional(),
           content: s.mdx(),
           objectPosition: s.enum(["top", "center", "bottom"]).optional(),
         })

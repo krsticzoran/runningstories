@@ -1,6 +1,5 @@
-"use client";
+import Link from "next/link";
 import { Tag, TAGS } from "@/lib/tags";
-import { useQueryState } from "nuqs";
 import { Post } from "@/type/post";
 import { CategoryCard } from "@/components/cards/categroy-card";
 import { CategoryPostsGrid } from "./category-posts-grid";
@@ -13,9 +12,10 @@ interface CategoryFilterProps {
   category: string;
   currentPage: number;
   totalPages: number;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-export function CategoryFilter({
+export async function CategoryFilter({
   tags,
   categoryPosts,
   featuredPost,
@@ -23,62 +23,61 @@ export function CategoryFilter({
   category,
   currentPage,
   totalPages,
+  searchParams,
 }: CategoryFilterProps) {
-  const validTags = Object.keys(TAGS) as Tag[];
+  const resolvedParams = await searchParams;
+  const activeTag = (resolvedParams.tag as string) || null;
 
-  const [tag, setTag] = useQueryState<Tag | null>("tag", {
-    defaultValue: null,
-    parse: (value) =>
-      validTags.includes(value as Tag) ? (value as Tag) : null,
-  });
-
-  if (!tags || tags.length === 0)
-    return (
-      <CategoryPostsGrid
-        featuredPost={featuredPost}
-        gridPosts={gridPosts}
-        category={category}
-        currentPage={currentPage}
-        totalPages={totalPages}
-      />
-    );
-
-  const filteredPosts = tag
+  const filteredPosts = activeTag
     ? categoryPosts
-        .filter((post) => post.tags?.includes(tag))
+        .filter((post) => post.tags?.includes(activeTag as Tag))
         .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     : [];
 
+  if (!tags || tags.length === 0) {
+    return null;
+  }
+
   return (
     <>
-      <div className="flex flex-wrap gap-2">
-        <button
-          onClick={() => setTag(null)}
-          className={`px-3 py-1 cursor-pointer rounded font-semibold ${
-            tag === null ? "text-white bg-black" : "text-black bg-white"
+      <div className="flex flex-wrap gap-2 mb-8">
+        <Link
+          href={`/${category}`}
+          scroll={false}
+          className={`px-3 py-1 rounded font-semibold transition-colors ${
+            !activeTag
+              ? "text-white bg-black"
+              : "text-black bg-white hover:bg-gray-100 border border-gray-200"
           }`}
         >
           Svi članci
-        </button>
+        </Link>
+
         {tags.map((tagValue) => (
-          <button
+          <Link
             key={tagValue}
-            className={`px-3 h-8 cursor-pointer rounded font-semibold ${
-              tag === tagValue ? "text-white bg-black" : "text-black bg-white"
+            href={`/${category}?tag=${tagValue}`}
+            scroll={false}
+            className={`px-3 py-1 rounded font-semibold transition-colors ${
+              activeTag === tagValue
+                ? "text-white bg-black"
+                : "text-black bg-white hover:bg-gray-100 border border-gray-200"
             }`}
-            onClick={() => setTag(tagValue)}
           >
             {TAGS[tagValue]}
-          </button>
+          </Link>
         ))}
       </div>
-      {tag ? (
-        <div className="flex flex-col gap-3 mt-5">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
-            {filteredPosts.map((post) => (
+
+      {activeTag ? (
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 mt-5">
+          {filteredPosts.length > 0 ? (
+            filteredPosts.map((post) => (
               <CategoryCard post={post} key={post.slug} />
-            ))}
-          </div>
+            ))
+          ) : (
+            <p className="text-gray-500 py-10">Nema članaka sa ovim tagom.</p>
+          )}
         </div>
       ) : (
         <CategoryPostsGrid

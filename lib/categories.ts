@@ -29,7 +29,7 @@ export const categoriesData: Record<
     excerpt:
       "> INITIALIZING... Track every kilometer and every byte of progress",
     ctaText: "Open Logs",
-    tags: [],
+    tags: ["restday", "dailylog"],
   },
   stack: {
     title: "The Stack",

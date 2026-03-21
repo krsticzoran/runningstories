@@ -7,6 +7,7 @@ import { CategoryPageLayout } from "@/components/category/category-page-layout";
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 export async function generateStaticParams() {
@@ -47,7 +48,10 @@ export async function generateMetadata({ params }: CategoryPageProps) {
   };
 }
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
+export default async function CategoryPage({
+  params,
+  searchParams,
+}: CategoryPageProps) {
   const { category } = await params;
 
   const categoryMeta = categoriesData[category];
@@ -76,6 +80,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       currentPage={1}
       totalPages={totalPages}
       categoryPosts={categoryPosts}
+      searchParams={searchParams}
     />
   );
 }

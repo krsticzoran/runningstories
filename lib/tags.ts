@@ -1,12 +1,6 @@
 export const TAGS = {
-  pocetnici: "Početnici",
-  rekreativci: "Rekreativci",
-  napredni: "Napredni",
-  "40plus": "40+",
-  "5k": "5K",
-  "10k": "10K",
-  "21k": "21K",
-  maraton: "Maraton",
+  dailylog: "#daily-log",
+  restday: "#rest-day",
 } as const;
 
 export type Tag = keyof typeof TAGS;

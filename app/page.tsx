@@ -6,5 +6,9 @@ import HomeHealth from "@/components/home/home-health";
 import HomeCommunity from "@/components/home/home-community";
 
 export default function Home() {
-  return <main className="mt-20 page-fade"></main>;
+  return (
+    <main className="mt-20 page-fade">
+      <HomeEquipment />
+    </main>
+  );
 }

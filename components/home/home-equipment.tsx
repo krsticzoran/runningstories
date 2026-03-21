@@ -6,6 +6,7 @@ import { SectionHeader } from "../ui/section-header";
 
 export default function HomeTraining() {
   const equimpmentPosts = useCategoryPosts("stack");
+  console.log(equimpmentPosts);
 
   return (
     <section className="bg-black py-[100px] xl:py-[120px]">
