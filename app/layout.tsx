@@ -5,7 +5,6 @@ import { Suspense } from "react";
 import "./globals.css";
 import Header from "@/components/layout/header/header";
 import { Footer } from "@/components/layout/footer/footer";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -69,7 +68,7 @@ export default function RootLayout({
         className={`${inter.variable} ${familjenGrotesk.variable} ${instrumentSerif.variable} antialiased`}
       >
         <Header />
-        <NuqsAdapter>{children}</NuqsAdapter>
+        {children}
         <Analytics />
         <Suspense>
           <Footer />
