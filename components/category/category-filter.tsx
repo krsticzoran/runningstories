@@ -35,7 +35,15 @@ export async function CategoryFilter({
     : [];
 
   if (!tags || tags.length === 0) {
-    return null;
+    return (
+      <CategoryPostsGrid
+        featuredPost={featuredPost}
+        gridPosts={gridPosts}
+        category={category}
+        currentPage={currentPage}
+        totalPages={totalPages}
+      />
+    );
   }
 
   return (
