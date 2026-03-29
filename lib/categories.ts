@@ -20,7 +20,7 @@ export const categoriesData: Record<
     tags: Tag[];
   }
 > = {
-  mission: {
+  "sub-3-journey": {
     title: "Sub 3 Journey",
     description:
       "At 45, starting over is a choice. This is the reality of chasing a sub-3 hour marathon while balancing a professional career and being a father. No filters, just the road to December 2027.",
