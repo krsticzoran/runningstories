@@ -1,5 +1,5 @@
 import missionImg from "@/assets/images/categories/iz-sveta-trcanja.webp";
-import logicImg from "@/assets/images/categories/zdravlje.webp";
+import trainingImg from "@/assets/images/categories/zdravlje.webp";
 import stackImg from "@/assets/images/categories/oprema.webp";
 import balanceImg from "@/assets/images/categories/trening.webp";
 
@@ -30,14 +30,14 @@ export const categoriesData: Record<
     ctaText: "Follow the Journey",
     tags: [],
   },
-  logic: {
-    title: "Smart Training",
+  "training-after-40": {
+    title: "Training After 40",
     description:
-      "Running science for busy professionals. How to improve without injuries, specifically tailored for the 35+ runner who balances career, family, and performance.",
-    image: logicImg,
-    alt: "Scientific approach to running performance",
-    excerpt: "Optimize the human hardware. Train smarter, not just harder.",
-    ctaText: "Explore Training",
+      "Running in your 40s is a different game. It’s about being faster and stronger while balancing a career, a family, and the reality of aging. No shortcuts, no injuries—just a smart approach for those of us who refuse to slow down.",
+    image: trainingImg,
+    alt: "A focused runner over 40 maintaining a steady pace",
+    excerpt: "Your best miles are still ahead of you. Keep moving forward.",
+    ctaText: "Start Training",
     tags: [],
   },
   stack: {
