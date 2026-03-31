@@ -27,16 +27,16 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "zorun.dev // Engineering the Run",
+  title: "Zorun // The Masters Running Method",
   description:
-    "A personal journey towards a sub-3 marathon. Exploring the intersection of long-distance running and a disciplined, data-driven mindset.",
+    "Stop training like a 20-year-old pro. Data-driven strategies for runners over 40 to master any distance while prioritizing recovery and sustainable performance.",
   alternates: {
     canonical: "https://zorun.dev",
   },
   openGraph: {
-    title: "zorun.dev // Engineering the Run",
+    title: "Zorun // The Masters Running Method",
     description:
-      "A personal journey towards a sub-3 marathon. Exploring the intersection of long-distance running and a disciplined, data-driven mindset.",
+      "Stop training like a 20-year-old pro. Data-driven strategies for runners over 40 to master any distance while prioritizing recovery and sustainable performance.",
     url: "https://zorun.dev",
     type: "website",
     images: [
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "zorun.dev // Engineering the Run",
+    title: "Zorun // The Masters Running Method",
     description:
-      "A personal journey towards a sub-3 marathon. Exploring the intersection of long-distance running and a disciplined, data-driven mindset.",
+      "Stop training like a 20-year-old pro. Data-driven strategies for runners over 40 to master any distance while prioritizing recovery and sustainable performance.",
     images: ["/og-image.png"],
   },
 };
