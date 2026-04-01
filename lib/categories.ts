@@ -1,6 +1,6 @@
 import missionImg from "@/assets/images/categories/iz-sveta-trcanja.webp";
 import trainingImg from "@/assets/images/categories/zdravlje.webp";
-import stackImg from "@/assets/images/categories/oprema.webp";
+import lifestyleImg from "@/assets/images/categories/oprema.webp";
 import balanceImg from "@/assets/images/categories/trening.webp";
 
 import { StaticImageData } from "next/image";
@@ -40,24 +40,14 @@ export const categoriesData: Record<
     ctaText: "Start Training",
     tags: [],
   },
-  stack: {
-    title: "Tech & Gear",
+  "beyond-the-miles": {
+    title: "Beyond the Miles",
     description:
-      "Honest gear reviews from a utility perspective. Discover what actually makes you faster and what is just marketing. From carbon plates to recovery gadgets.",
-    image: stackImg,
-    alt: "Running and tech gear configuration",
-    excerpt: "The Stack: Tested tools that drive real performance.",
-    ctaText: "Inspect Gear",
-    tags: [],
-  },
-  balance: {
-    title: "Life Balance",
-    description:
-      "The intersection of health and productivity. How to manage nutrition, sleep, and recovery while working a high-focus 8-hour job without burning out.",
-    image: balanceImg,
-    alt: "Managing family, work, and high-performance training",
-    excerpt: "System Stability: Balancing career, family, and the track.",
-    ctaText: "View Balance",
+      "Running is about more than just the miles on your watch. This is where we talk about everything that happens between workouts—from recovery and nutrition to time management and staying motivated. Everything you need to stay consistent and enjoy the ride.",
+    image: lifestyleImg,
+    alt: "A runner's watch, healthy meal, and gear on a table",
+    excerpt: "How to balance your running goals with a busy life.",
+    ctaText: "Explore More",
     tags: [],
   },
 };

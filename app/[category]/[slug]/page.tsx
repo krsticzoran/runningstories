@@ -129,7 +129,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {showRelated && (
           <Container>
-            <h3 className="text-black text-[36px] leading-9 sm:text-[44px] sm:leading-11 lg:text-[52px] lg:leading-[52px] tracking-tight font-bold font-familjen mt-10 mb-8 first:-mt-3">
+            <h3 className="text-custom-dark text-[36px] leading-9 sm:text-[44px] sm:leading-11 lg:text-[52px] lg:leading-[52px] tracking-tight font-bold font-familjen mt-10 mb-8 first:-mt-3">
               Srodni članci
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-[60px]">

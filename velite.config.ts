@@ -21,10 +21,9 @@ export default defineConfig({
           description: s.string().max(999),
           date: s.isodate(),
           category: s.enum([
-            "balance",
-            "stack",
             "training-after-40",
             "sub-3-journey",
+            "beyond-the-miles",
           ]),
           image: s.image(),
           imageAlt: s.string().max(200),

@@ -5,14 +5,13 @@ import Quote from "./quotes";
 import { SectionHeader } from "../ui/section-header";
 
 export default function HomeTraining() {
-  const equimpmentPosts = useCategoryPosts("stack");
-  console.log(equimpmentPosts);
+  const equimpmentPosts = useCategoryPosts("beyond-the-miles");
 
   return (
     <section className="bg-black py-[100px] xl:py-[120px]">
       <Container className="flex flex-col">
         <SectionHeader
-          slug="stack"
+          slug="beyond-the-miles"
           bgColor="black"
           btnBorderColor="border-white"
         />
