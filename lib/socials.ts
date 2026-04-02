@@ -2,22 +2,22 @@ import { SiYoutube, SiInstagram, SiTiktok, SiFacebook } from "react-icons/si";
 
 export const socials = [
   {
-    href: "https://www.youtube.com/@trkacke_price",
+    href: "https://www.youtube.com/@zorun_dev",
     label: "YouTube",
     icon: SiYoutube,
   },
   {
-    href: "https://www.instagram.com/trkacke.price/",
+    href: "https://www.instagram.com/zorun.dailymotion/",
     label: "Instagram",
     icon: SiInstagram,
   },
   {
-    href: "https://www.tiktok.com/@trkacke_price",
+    href: "https://www.tiktok.com/@zorun_dev",
     label: "TikTok",
     icon: SiTiktok,
   },
   {
-    href: "https://www.facebook.com/profile.php?id=61588449144282",
+    href: "https://www.facebook.com/profile.php?id=61577465927875",
     label: "Facebook",
     icon: SiFacebook,
   },

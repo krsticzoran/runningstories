@@ -1,7 +1,6 @@
 import missionImg from "@/assets/images/categories/iz-sveta-trcanja.webp";
 import trainingImg from "@/assets/images/categories/zdravlje.webp";
 import lifestyleImg from "@/assets/images/categories/oprema.webp";
-import balanceImg from "@/assets/images/categories/trening.webp";
 
 import { StaticImageData } from "next/image";
 import { Tag } from "@/lib/tags";
