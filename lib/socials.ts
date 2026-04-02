@@ -2,7 +2,7 @@ import { SiYoutube, SiInstagram, SiTiktok, SiFacebook } from "react-icons/si";
 
 export const socials = [
   {
-    href: "https://www.youtube.com/@zorun_dev",
+    href: "https://www.youtube.com/@zorun.dailymotion",
     label: "YouTube",
     icon: SiYoutube,
   },
