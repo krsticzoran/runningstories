@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import headerImage from "@/assets/images/header/header-image.webp";
+import headerImage from "@/assets/images/header/race.jpg";
 
 export function MenuVisual() {
   return (
