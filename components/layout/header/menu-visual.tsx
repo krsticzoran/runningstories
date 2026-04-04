@@ -9,7 +9,7 @@ export function MenuVisual() {
         src={headerImage}
         fill
         quality={60}
-        alt="running women"
+        alt="running race"
         className="object-cover page-fade"
         priority
       />
